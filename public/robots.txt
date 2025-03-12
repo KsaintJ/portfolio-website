@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kendersaintjuste.dev
+
+# Sitemaps
+Sitemap: https://kendersaintjuste.dev/sitemap.xml
+Sitemap: https://kendersaintjuste.dev/server-sitemap.xml
