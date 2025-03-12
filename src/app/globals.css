@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+}
+
+@import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
