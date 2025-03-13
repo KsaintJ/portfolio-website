@@ -71,11 +71,11 @@ const Footer = () => {
             </p>
             <p className="text-gray-400 mb-4">
               <a 
-                href="mailto:youremail@example.com" 
-                className="hover:text-white transition-colors duration-300"
-              >
-                ksaintjuste7@gmail
-              </a>
+                 href="mailto:ksaintjuste7@gmail.com"
+                 className="hover:text-white transition-colors duration-300"
+               >
+                 ksaintjuste7@gmail.com
+               </a>
             </p>
             <Link
               href="/contact"
