@@ -63,14 +63,14 @@ const Hero = () => {
         </a>
         
         <a 
-  href="/resumes/Resume_Junior_Dev.pdf" 
-  target="_blank" 
-  rel="noreferrer" 
-  className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110"
-  aria-label="Resume"
->
-  <FaFileAlt className="h-6 w-6" />
-</a>
+         href="/resumes/Resume_Junior_Dev.pdf" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110"
+         aria-label="Resume"
+        >
+         <FaFileAlt className="h-6 w-6" />
+        </a>
         
         <div className="h-24 w-px bg-gray-300 dark:bg-gray-700 mx-auto mt-2"></div>
       </motion.div>
@@ -170,12 +170,13 @@ const Hero = () => {
               </a>
               
               <a 
-                href="/resume.pdf" 
+                href="/resumes/Resume_Junior_Dev.pdf" 
                 target="_blank" 
-                rel="noreferrer" 
+                rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
-              >
-                <FaFileAlt className="h-6 w-6" />
+                download
+               >
+               <FaFileAlt className="h-6 w-6" />
               </a>
             </motion.div>
           </motion.div>

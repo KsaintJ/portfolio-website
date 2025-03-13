@@ -1,49 +1,35 @@
+// src/components/ThemeToggle.tsx
 "use client";
 
-import { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
-import { HiSun, HiMoon } from 'react-icons/hi';
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  // Prevent hydration mismatch by only rendering after mounting
+  // When mounted, we can show the toggle
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Function to toggle the theme
-  const toggleTheme = () => {
-    // Use resolvedTheme instead of theme for more reliable detection
-    const newTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    console.log('Theme toggled to:', newTheme);
-  };
-
-  // While not mounted, render a placeholder of the same size to prevent layout shift
   if (!mounted) {
-    return (
-      <button 
-        aria-label="Toggle theme" 
-        className="w-10 h-10 p-2 rounded-full bg-gray-200 dark:bg-gray-700"
-      >
-        <span className="sr-only">Toggle theme</span>
-        <div className="w-6 h-6" />
-      </button>
-    );
+    return <div className="w-10 h-10"></div>; // Placeholder to prevent layout shift
   }
 
   return (
     <button
-      onClick={toggleTheme}
-      aria-label={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} theme`}
-      className="w-10 h-10 p-2 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
+      onClick={() => {
+        setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+      }}
+      className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+      aria-label="Toggle dark mode"
     >
       {resolvedTheme === 'dark' ? (
-        <HiSun className="w-6 h-6 text-yellow-400" />
+        <FaSun className="text-yellow-300 h-5 w-5" />
       ) : (
-        <HiMoon className="w-6 h-6 text-gray-700" />
+        <FaMoon className="text-gray-700 h-5 w-5" />
       )}
     </button>
   );

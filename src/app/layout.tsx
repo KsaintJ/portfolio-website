@@ -8,7 +8,6 @@ import LoadingAnimation from '@/components/LoadingAnimation';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 // Base metadata for your entire site
@@ -68,8 +67,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            try {
+              if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+              } else {
+                document.documentElement.classList.remove('dark');
+              }
+            } catch (e) {}
+          `
+        }} />
+      </head>
+      <body className={`${inter.className} h-full bg-white dark:bg-gray-900`}>
         <ThemeProvider
           defaultTheme="system"
           enableSystem
@@ -79,7 +91,7 @@ export default function RootLayout({
           <ScrollProgressBar />
           <Navbar />
           <main>{children}</main>
-          <GoogleAnalytics /> {/* Add it here at the end of the body */}
+          <GoogleAnalytics />
         </ThemeProvider>
       </body>
     </html>
