@@ -1,25 +1,12 @@
-// src/components/Analytics.tsx
+// src/components/GoogleAnalytics.tsx
 "use client";
 
 import Script from 'next/script';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
 
-export default function Analytics() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  
-  useEffect(() => {
-    if (pathname) {
-      window.gtag?.('config', 'G-239SNXQRHF', {
-        page_path: pathname + searchParams.toString(),
-      });
-    }
-  }, [pathname, searchParams]);
-  
+export default function GoogleAnalytics() {
   return (
     <>
-      <Script
+      <Script 
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-239SNXQRHF`}
       />

@@ -6,7 +6,8 @@ import Navbar from '@/components/Navbar';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import LoadingAnimation from '@/components/LoadingAnimation';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
-import Analytics from '@/components/Analytics'; // Add this import
+import GoogleAnalytics from '@/components/GoogleAnalytics'; // Use this import
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -68,6 +69,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <GoogleAnalytics /> {/* Add it here in the head section */}
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           defaultTheme="system"
@@ -78,7 +82,6 @@ export default function RootLayout({
           <ScrollProgressBar />
           <Navbar />
           <main>{children}</main>
-          <Analytics /> {/* Add the Analytics component here */}
         </ThemeProvider>
       </body>
     </html>
