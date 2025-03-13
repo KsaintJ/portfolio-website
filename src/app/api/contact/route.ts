@@ -17,8 +17,8 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     
     const { data, error } = await resend.emails.send({
-      from: 'Portfolio <onboarding@resend.dev>', // You can use this for testing
-      to: [process.env.EMAIL_USER], // Your email address
+      from: 'Portfolio <onboarding@resend.dev>',
+      to: ['kxs6434@psu.edu'], // Change to your PSU email
       reply_to: email,
       subject: `Portfolio Contact: ${subject}`,
       html: `
@@ -33,6 +33,7 @@ export async function POST(request: Request) {
     });
     
     if (error) {
+      console.error('Resend API error:', error);
       return NextResponse.json(
         { error: error.message },
         { status: 500 }
@@ -46,7 +47,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to send email', details: (error as Error).message },
       { status: 500 }
     );
   }
