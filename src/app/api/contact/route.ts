@@ -1,6 +1,5 @@
-// src/app/api/contact/route.ts
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -15,40 +14,30 @@ export async function POST(request: Request) {
   }
 
   try {
-    // Create a transporter
-    // Replace only the transporter configuration part with this:
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
-    // Define email options
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Send to yourself
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    
+    const { data, error } = await resend.emails.send({
+      from: 'Portfolio <onboarding@resend.dev>', // You can use this for testing
+      to: [process.env.EMAIL_USER], // Your email address
+      reply_to: email,
       subject: `Portfolio Contact: ${subject}`,
-      text: `
-        Name: ${name}
-        Email: ${email}
-        
-        Message:
-        ${message}
-      `,
       html: `
+        <h2>New Contact from Portfolio</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
         <br/>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
-      `
-    };
-
-    // Send email
-    await transporter.sendMail(mailOptions);
+      `,
+    });
+    
+    if (error) {
+      return NextResponse.json(
+        { error: error.message },
+        { status: 500 }
+      );
+    }
     
     return NextResponse.json(
       { success: true, message: 'Email sent successfully!' },
