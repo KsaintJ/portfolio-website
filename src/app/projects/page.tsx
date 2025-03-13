@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import Footer from '@/components/Footer';
+import SafeMotion from '@/components/SafeMotion';
+import { motion } from 'framer-motion';
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState('all');
@@ -90,26 +91,26 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
       <div className="container mx-auto px-4 py-10">
-        <motion.h1 
+        <SafeMotion 
           className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           My Projects
-        </motion.h1>
+        </SafeMotion>
         
-        <motion.p 
+        <SafeMotion 
           className="text-lg text-center text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Here&apos;s a collection of my recent work, showcasing my skills in frontend and full-stack development.
-        </motion.p>
+        </SafeMotion>
         
         {/* Filter and Search */}
-        <motion.div 
+        <SafeMotion 
           className="mb-12 flex flex-col md:flex-row justify-between items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -140,13 +141,13 @@ export default function ProjectsPage() {
               className="w-full md:w-64 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600/50 focus:border-blue-600 outline-none transition duration-300"
             />
           </div>
-        </motion.div>
+        </SafeMotion>
         
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {displayedProjects.length > 0 ? (
             displayedProjects.map((project, index) => (
-              <motion.div
+              <SafeMotion
                 key={project.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -154,7 +155,6 @@ export default function ProjectsPage() {
                 className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
                 whileHover={{ 
                   y: -5,
-                  rotateY: 5,
                   transition: { duration: 0.2 }
                 }}
               >
@@ -176,10 +176,8 @@ export default function ProjectsPage() {
                   )}
                   
                   {/* Hover overlay with action buttons */}
-                  <motion.div 
+                  <div 
                     className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
                   >
                     <div className="flex gap-3">
                       {project.githubUrl && (
@@ -219,7 +217,7 @@ export default function ProjectsPage() {
                         </motion.a>
                       )}
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
                 
                 {/* Project Content */}
@@ -271,10 +269,10 @@ export default function ProjectsPage() {
                     </svg>
                   </Link>
                 </div>
-              </motion.div>
+              </SafeMotion>
             ))
           ) : (
-            <motion.div 
+            <SafeMotion 
               className="col-span-full text-center py-16"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -283,13 +281,13 @@ export default function ProjectsPage() {
               <p className="text-xl text-gray-600 dark:text-gray-400">
                 No projects match your criteria. Try adjusting your filters.
               </p>
-            </motion.div>
+            </SafeMotion>
           )}
         </div>
         
         {/* Load More Button */}
         {filteredProjects.length > displayCount && (
-          <motion.div 
+          <SafeMotion 
             className="flex justify-center mt-8 mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -316,11 +314,11 @@ export default function ProjectsPage() {
                 />
               </svg>
             </button>
-          </motion.div>
+          </SafeMotion>
         )}
         
         {/* Additional Projects / GitHub Repositories Section */}
-        <motion.div 
+        <SafeMotion 
           className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -335,6 +333,7 @@ export default function ProjectsPage() {
             Beyond the featured projects above, you can explore more of my work and code contributions on GitHub. I&apos;m constantly learning and building new things!
           </p>
           
+          
           <a
             href="https://github.com/KsaintJ"
             target="_blank"
@@ -344,7 +343,7 @@ export default function ProjectsPage() {
             <FaGithub className="mr-2 h-5 w-5" />
             View GitHub Profile
           </a>
-        </motion.div>
+        </SafeMotion>
       </div>
       <Footer />
     </div>
