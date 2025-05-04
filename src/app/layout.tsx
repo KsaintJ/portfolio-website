@@ -3,10 +3,13 @@ import './globals.css';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeProvider } from 'next-themes'; // Use this if you're using next-themes
 import LoadingAnimation from '@/components/LoadingAnimation';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import PageTransition from '@/components/PageTransition';
+import { LanguageProvider } from '@/i18n';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -87,11 +90,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LoadingAnimation />
-          <ScrollProgressBar />
-          <Navbar />
-          <main>{children}</main>
-          <GoogleAnalytics />
+          <LanguageProvider>
+            <LoadingAnimation />
+            <ScrollProgressBar />
+            <Navbar />
+            <main>{children}</main>
+            <GoogleAnalytics />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

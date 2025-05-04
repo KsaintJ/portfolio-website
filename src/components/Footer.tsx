@@ -3,8 +3,10 @@
 
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { useLanguage } from '@/i18n';
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
@@ -13,12 +15,12 @@ const Footer = () => {
     { icon: <FaTwitter />, url: 'https://twitter.com/yourusername', label: 'Twitter' },
     { icon: <FaEnvelope />, url: 'mailto:ksaintjuste7@gmail.com', label: 'Email' }
   ];
-  
+
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' }
+    { name: t('navigation.home'), href: '/' },
+    { name: t('navigation.about'), href: '/about' },
+    { name: t('navigation.projects'), href: '/projects' },
+    { name: t('navigation.contact'), href: '/contact' }
   ];
 
   return (
@@ -30,7 +32,7 @@ const Footer = () => {
               KSJ<span className="text-blue-500">Dev</span>
             </Link>
             <p className="text-gray-400 mb-4">
-              Software developer specializing in frontend and full-stack development with React, Next.js, and modern JavaScript.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
@@ -49,7 +51,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.name}>
@@ -65,7 +67,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+          <h3 className="text-lg font-semibold mb-4">{t('footer.contact')}</h3>
             <p className="text-gray-400 mb-2">
               Tampa, Florida
             </p>
@@ -81,17 +83,15 @@ const Footer = () => {
               href="/contact"
               className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white transition duration-300"
             >
-              Get In Touch
+              {t('footer.getInTouch')}
             </Link>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} Kender Saint-Juste. All rights reserved.</p>
+        <p>&copy; {currentYear} Kender Saint-Juste. {t('footer.rights')}</p>
           <p className="mt-2 text-sm">
-            Built with 
-            <span className="text-red-500 mx-1">♥</span>
-            using Next.js, React, and Tailwind CSS
+          {t('footer.madeWith')} <span className="text-red-500 mx-1">♥</span> {t('footer.usingTech')}
           </p>
         </div>
       </div>

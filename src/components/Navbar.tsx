@@ -5,11 +5,13 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-import ThemeToggle from './ThemeToggle';
+import LanguageSelector from './LanguageSelector';
+import { useLanguage } from '@/i18n';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,10 +31,10 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' }
+    { name: t('navigation.home'), href: '/' },
+    { name: t('navigation.about'), href: '/about' },
+    { name: t('navigation.projects'), href: '/projects' },
+    { name: t('navigation.contact'), href: '/contact' }
   ];
 
   const navVariants = {
@@ -80,12 +82,12 @@ const Navbar = () => {
               </Link>
             ))}
             
-            <ThemeToggle />
+            <LanguageSelector />
           </div>
 
           {/* Mobile Nav Button */}
           <div className="flex items-center md:hidden">
-            <ThemeToggle />
+            <LanguageSelector />
             
             <button
               onClick={toggleMenu}

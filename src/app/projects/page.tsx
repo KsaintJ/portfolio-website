@@ -7,8 +7,10 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import Footer from '@/components/Footer';
 import SafeMotion from '@/components/SafeMotion';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/i18n';
 
 export default function ProjectsPage() {
+  const { t } = useLanguage();
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [displayCount, setDisplayCount] = useState(6);
@@ -97,7 +99,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          My Projects
+          {t('projects.title') || 'My Projects'}
         </SafeMotion>
         
         <SafeMotion 
@@ -106,7 +108,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Here&apos;s a collection of my recent work, showcasing my skills in frontend and full-stack development.
+         {t('projects.subtitle') || "Here's a collection of my recent work, showcasing my skills in frontend and full-stack development."}
         </SafeMotion>
         
         {/* Filter and Search */}
@@ -135,7 +137,7 @@ export default function ProjectsPage() {
           <div className="w-full md:w-auto">
             <input
               type="text"
-              placeholder="Search projects..."
+              placeholder={t('projects.searchPlaceholder') || "Search projects..."}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full md:w-64 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600/50 focus:border-blue-600 outline-none transition duration-300"
@@ -252,7 +254,7 @@ export default function ProjectsPage() {
                     href={project.detailsUrl}
                     className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-300"
                   >
-                    View Details
+                     {t('projects.viewDetails')}
                     <svg
                       className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1"
                       fill="none"
@@ -279,7 +281,7 @@ export default function ProjectsPage() {
               transition={{ duration: 0.5 }}
             >
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                No projects match your criteria. Try adjusting your filters.
+              {t('projects.noResults')}
               </p>
             </SafeMotion>
           )}
@@ -298,7 +300,7 @@ export default function ProjectsPage() {
               onClick={() => setDisplayCount(prev => prev + 3)}
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md shadow-md transition duration-300 flex items-center"
             >
-              <span>Load More Projects</span>
+               <span>{t('projects.loadMore')}</span>
               <svg 
                 className="w-5 h-5 ml-2"
                 fill="none"
@@ -326,11 +328,11 @@ export default function ProjectsPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            More on GitHub
+          {t('projects.moreOnGitHub.title')}
           </h2>
           
           <p className="text-gray-700 dark:text-gray-300 mb-6">
-            Beyond the featured projects above, you can explore more of my work and code contributions on GitHub. I&apos;m constantly learning and building new things!
+           {t('projects.moreOnGitHub.description')}
           </p>
           
           
@@ -341,7 +343,8 @@ export default function ProjectsPage() {
             className="inline-flex items-center px-6 py-3 bg-gray-900 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white font-medium rounded-md transition duration-300"
           >
             <FaGithub className="mr-2 h-5 w-5" />
-            View GitHub Profile
+            <FaGithub className="mr-2 h-5 w-5" />
+            {t('projects.moreOnGitHub.viewProfile')}
           </a>
         </SafeMotion>
       </div>

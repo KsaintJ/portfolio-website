@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub, FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
 import Footer from '@/components/Footer';
-import SafeMotion from '@/components/SafeMotion';
 
 export default function PortfolioWebsitePage() {
   // Technologies used in the project
@@ -205,370 +204,355 @@ export const useTheme = () => useContext(ThemeContext);`,
         </div>
         
         {/* Project Header */}
-        <SafeMotion>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-12"
-          >
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Personal Portfolio Website
-            </h1>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              {technologies.slice(0, 5).map((tech, index) => (
-                <span 
-                  key={index}
-                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            
-            {/* GitHub & Live Links */}
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://github.com/KsaintJ/portfolio-website"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 text-white rounded-md transition duration-300"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Personal Portfolio Website
+          </h1>
+          
+          <div className="flex flex-wrap gap-2 mb-6">
+            {technologies.slice(0, 5).map((tech, index) => (
+              <span 
+                key={index}
+                className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
               >
-                <FaGithub className="mr-2" />
-                View on GitHub
-              </a>
-              
-              <a
-                href="https://kendersaintjuste.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition duration-300"
-              >
-                <FaExternalLinkAlt className="mr-2" />
-                View Live Site
-              </a>
-            </div>
-          </motion.div>
-        </SafeMotion>
+                {tech}
+              </span>
+            ))}
+          </div>
+          
+          {/* GitHub & Live Links */}
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/KsaintJ/portfolio-website"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 text-white rounded-md transition duration-300"
+            >
+              <FaGithub className="mr-2" />
+              View on GitHub
+            </a>
+            
+            <a
+              href="https://kendersaintjuste.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition duration-300"
+            >
+              <FaExternalLinkAlt className="mr-2" />
+              View Live Site
+            </a>
+          </div>
+        </motion.div>
         
         {/* Main Project Image - Using SVG placeholder since actual images might be missing */}
-        <SafeMotion>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-12 relative h-64 md:h-96 rounded-xl overflow-hidden shadow-lg"
-          >
-            <div className="relative w-full h-full">
-              <Image
-                src="/images/projects/portfolio-website/thumbnail.svg"
-                alt="Portfolio Website"
-                fill
-                sizes="(max-width: 768px) 100vw, 1200px"
-                priority
-                className="object-cover"
-                onError={(e) => {
-                  // Fallback to gradient background if image fails to load
-                  (e.target as HTMLImageElement).style.display = 'none';
-                  (e.target as HTMLImageElement).parentElement!.style.background = 'linear-gradient(to right, #3b82f6, #6366f1)';
-                  const div = document.createElement('div');
-                  div.className = 'absolute inset-0 flex items-center justify-center';
-                  div.innerHTML = '<div class="text-white text-2xl font-bold text-center px-4">Portfolio Website</div>';
-                  (e.target as HTMLImageElement).parentElement!.appendChild(div);
-                }}
-              />
-            </div>
-          </motion.div>
-        </SafeMotion>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-12 relative h-64 md:h-96 rounded-xl overflow-hidden shadow-lg"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/projects/portfolio-website/thumbnail.svg"
+              alt="Portfolio Website"
+              fill
+              sizes="(max-width: 768px) 100vw, 1200px"
+              priority
+              className="object-cover"
+              onError={(e) => {
+                // Fallback to gradient background if image fails to load
+                e.target.style.display = 'none';
+                e.target.parentElement.style.background = 'linear-gradient(to right, #3b82f6, #6366f1)';
+                const div = document.createElement('div');
+                div.className = 'absolute inset-0 flex items-center justify-center';
+                div.innerHTML = '<div class="text-white text-2xl font-bold text-center px-4">Portfolio Website</div>';
+                e.target.parentElement.appendChild(div);
+              }}
+            />
+          </div>
+        </motion.div>
         
         {/* Project Description */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="md:col-span-2">
-            <SafeMotion>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Project Overview
-                </h2>
-                <p className="text-gray-700 dark:text-gray-300 mb-6">
-                  This portfolio website serves as a comprehensive showcase of my skills, projects, and professional journey as a software developer. Built using modern web technologies including Next.js, React, and Tailwind CSS, the site features responsive design, dark/light mode functionality, and interactive UI elements.
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-6">
-                  The project itself demonstrates my abilities in frontend development, UI/UX design principles, and implementation of serverless functionality. It was designed with accessibility and performance in mind, ensuring a seamless experience for all visitors.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Key Features
-                </h2>
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  {features.map((feature, index) => (
-                    <div 
-                      key={index}
-                      className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow-sm"
-                    >
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                        {feature.title}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Project Overview
+              </h2>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
+                This portfolio website serves as a comprehensive showcase of my skills, projects, and professional journey as a software developer. Built using modern web technologies including Next.js, React, and Tailwind CSS, the site features responsive design, dark/light mode functionality, and interactive UI elements.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
+                The project itself demonstrates my abilities in frontend development, UI/UX design principles, and implementation of serverless functionality. It was designed with accessibility and performance in mind, ensuring a seamless experience for all visitors.
+              </p>
+              
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Key Features
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                {features.map((feature, index) => (
+                  <div 
+                    key={index}
+                    className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow-sm"
+                  >
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Development Process
+              </h2>
+              <div className="space-y-8">
+                {developmentPhases.map((phase, index) => (
+                  <div key={index} className="flex">
+                    <div className="flex-shrink-0 mr-4">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white font-bold">
+                        {index + 1}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                        {phase.title}
                       </h3>
                       <p className="text-gray-700 dark:text-gray-300">
-                        {feature.description}
+                        {phase.description}
                       </p>
                     </div>
-                  ))}
-                </div>
-                
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Development Process
-                </h2>
-                <div className="space-y-8">
-                  {developmentPhases.map((phase, index) => (
-                    <div key={index} className="flex">
-                      <div className="flex-shrink-0 mr-4">
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white font-bold">
-                          {index + 1}
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                          {phase.title}
-                        </h3>
-                        <p className="text-gray-700 dark:text-gray-300">
-                          {phase.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </SafeMotion>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
           
           <div>
-            <SafeMotion>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md"
-              >
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  Technologies Used
-                </h3>
-                <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    Next.js 14 for frontend framework
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    React for component architecture
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    TypeScript for type safety
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    Tailwind CSS for styling
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    Framer Motion for animations
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    Next.js API Routes for backend
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    Nodemailer for email functionality
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    Vercel for hosting and deployment
-                  </li>
-                </ul>
-                
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
-                  Performance Metrics
-                </h3>
-                <div className="space-y-2">
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 dark:text-gray-300">Lighthouse Performance</span>
-                      <span className="text-gray-700 dark:text-gray-300">95+</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                      <div className="bg-green-600 h-2.5 rounded-full" style={{ width: '95%' }}></div>
-                    </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md"
+            >
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                Technologies Used
+              </h3>
+              <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  Next.js 14 for frontend framework
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  React for component architecture
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  TypeScript for type safety
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  Tailwind CSS for styling
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  Framer Motion for animations
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  Next.js API Routes for backend
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  Nodemailer for email functionality
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  Vercel for hosting and deployment
+                </li>
+              </ul>
+              
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+                Performance Metrics
+              </h3>
+              <div className="space-y-2">
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-gray-700 dark:text-gray-300">Lighthouse Performance</span>
+                    <span className="text-gray-700 dark:text-gray-300">95+</span>
                   </div>
-                  
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 dark:text-gray-300">Accessibility</span>
-                      <span className="text-gray-700 dark:text-gray-300">98+</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                      <div className="bg-green-600 h-2.5 rounded-full" style={{ width: '98%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 dark:text-gray-300">Mobile Responsiveness</span>
-                      <span className="text-gray-700 dark:text-gray-300">100%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                      <div className="bg-green-600 h-2.5 rounded-full" style={{ width: '100%' }}></div>
-                    </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                    <div className="bg-green-600 h-2.5 rounded-full" style={{ width: '95%' }}></div>
                   </div>
                 </div>
-              </motion.div>
-            </SafeMotion>
+                
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-gray-700 dark:text-gray-300">Accessibility</span>
+                    <span className="text-gray-700 dark:text-gray-300">98+</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                    <div className="bg-green-600 h-2.5 rounded-full" style={{ width: '98%' }}></div>
+                  </div>
+                </div>
+                
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-gray-700 dark:text-gray-300">Mobile Responsiveness</span>
+                    <span className="text-gray-700 dark:text-gray-300">100%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                    <div className="bg-green-600 h-2.5 rounded-full" style={{ width: '100%' }}></div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
         
         {/* Code Snippets */}
-        <SafeMotion>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-16"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Code Highlights
-            </h2>
-            
-            <div className="space-y-8">
-              {codeSnippets.map((snippet, index) => (
-                <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md">
-                  <div className="bg-gray-200 dark:bg-gray-700 px-4 py-2 font-mono text-sm text-gray-800 dark:text-gray-200">
-                    {snippet.title}
-                  </div>
-                  <pre className="p-4 overflow-x-auto text-sm bg-gray-900 text-gray-200">
-                    <code className={`language-${snippet.language}`}>
-                      {snippet.code}
-                    </code>
-                  </pre>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            Code Highlights
+          </h2>
+          
+          <div className="space-y-8">
+            {codeSnippets.map((snippet, index) => (
+              <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md">
+                <div className="bg-gray-200 dark:bg-gray-700 px-4 py-2 font-mono text-sm text-gray-800 dark:text-gray-200">
+                  {snippet.title}
                 </div>
-              ))}
-            </div>
-          </motion.div>
-        </SafeMotion>
+                <pre className="p-4 overflow-x-auto text-sm bg-gray-900 text-gray-200">
+                  <code className={`language-${snippet.language}`}>
+                    {snippet.code}
+                  </code>
+                </pre>
+              </div>
+            ))}
+          </div>
+        </motion.div>
         
         {/* Challenges and Solutions */}
-        <SafeMotion>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-16"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Challenges & Solutions
-            </h2>
-            
-            <div className="space-y-6">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-gray-700">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  Dark Mode Implementation
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>Challenge:</strong> Implementing a dark mode that works seamlessly with Next.js 14&apos;s App Router while avoiding hydration mismatches.
-                </p>
-                <p className="text-gray-700 dark:text-gray-300">
-                  <strong>Solution:</strong> Created a custom ThemeProvider component using React Context API that synchronizes with localStorage and the system preference. Used the next-themes library to handle the complexities of server-side rendering with theme detection.
-                </p>
-              </div>
-              
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-gray-700">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  Contact Form Backend
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>Challenge:</strong> Creating a secure and reliable backend for the contact form without setting up a dedicated server.
-                </p>
-                <p className="text-gray-700 dark:text-gray-300">
-                  <strong>Solution:</strong> Utilized Next.js API Routes to create a serverless backend function that processes form submissions and sends emails using Nodemailer. Implemented proper validation and error handling to ensure security and reliability.
-                </p>
-              </div>
-              
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-gray-700">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  Performance Optimization
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>Challenge:</strong> Ensuring fast page loads while maintaining visual appeal with animations and images.
-                </p>
-                <p className="text-gray-700 dark:text-gray-300">
-                  <strong>Solution:</strong> Used Next.js Image component for optimized image loading, implemented lazy loading for below-the-fold content, and carefully crafted Framer Motion animations to minimize layout shifts and maintain smooth performance.
-                </p>
-              </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            Challenges & Solutions
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-gray-700">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Dark Mode Implementation
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                <strong>Challenge:</strong> Implementing a dark mode that works seamlessly with Next.js 14&apos;s App Router while avoiding hydration mismatches.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Solution:</strong> Created a custom ThemeProvider component using React Context API that synchronizes with localStorage and the system preference. Used the next-themes library to handle the complexities of server-side rendering with theme detection.
+              </p>
             </div>
-          </motion.div>
-        </SafeMotion>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-gray-700">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Contact Form Backend
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                <strong>Challenge:</strong> Creating a secure and reliable backend for the contact form without setting up a dedicated server.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Solution:</strong> Utilized Next.js API Routes to create a serverless backend function that processes form submissions and sends emails using Nodemailer. Implemented proper validation and error handling to ensure security and reliability.
+              </p>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-100 dark:border-gray-700">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Performance Optimization
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                <strong>Challenge:</strong> Ensuring fast page loads while maintaining visual appeal with animations and images.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Solution:</strong> Used Next.js Image component for optimized image loading, implemented lazy loading for below-the-fold content, and carefully crafted Framer Motion animations to minimize layout shifts and maintain smooth performance.
+              </p>
+            </div>
+          </div>
+        </motion.div>
         
         {/* Lessons Learned */}
-        <SafeMotion>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-16"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Lessons Learned
-            </h2>
-            <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-8 text-white shadow-lg">
-              <p className="mb-4">
-                This project provided valuable insights and learning opportunities:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Modern React development with Next.js App Router architecture</li>
-                <li>Implementing accessible design practices including keyboard navigation and color contrast</li>
-                <li>Serverless backend development for form processing</li>
-                <li>Optimizing animations for performance while maintaining visual appeal</li>
-                <li>Managing theme switching with proper user preference detection</li>
-                <li>Building a portfolio that effectively showcases both design and technical skills</li>
-              </ul>
-            </div>
-          </motion.div>
-        </SafeMotion>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Lessons Learned
+          </h2>
+          <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-8 text-white shadow-lg">
+            <p className="mb-4">
+              This project provided valuable insights and learning opportunities:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Modern React development with Next.js App Router architecture</li>
+              <li>Implementing accessible design practices including keyboard navigation and color contrast</li>
+              <li>Serverless backend development for form processing</li>
+              <li>Optimizing animations for performance while maintaining visual appeal</li>
+              <li>Managing theme switching with proper user preference detection</li>
+              <li>Building a portfolio that effectively showcases both design and technical skills</li>
+            </ul>
+          </div>
+        </motion.div>
         
-        {/* Professional Relevance */}
-        <SafeMotion>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-16"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-               Professional Relevance 
-            </h2>
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-              This portfolio website showcases skills relevant to modern web development positions:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-              <li>Building with Next.js and React - demonstrating proficiency with industry-standard frameworks</li>
-              <li>Creating responsive designs with Tailwind CSS - essential for modern web applications</li>
-              <li>Implementing animations and interactive elements - enhancing user experience</li>
-              <li>Setting up CI/CD pipelines with GitHub and Vercel - showing DevOps knowledge</li>
-              <li>Optimizing for performance and accessibility - demonstrating professional best practices</li>
-              <li>Developing an effective personal brand through web development - a valuable skill for any organization</li>
-              </ul>
-            </div>
-          </motion.div>
-        </SafeMotion>
+        {/* Internship Relevance */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Relevance to Internship Goals
+          </h2>
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              This project demonstrates several skills that are directly applicable to frontend and full-stack development internships:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+              <li>Proficiency with modern React development patterns and Next.js framework</li>
+              <li>Ability to create responsive, accessible, and visually appealing user interfaces</li>
+              <li>Experience with TypeScript for type safety and code quality</li>
+              <li>Implementation of serverless backend functionality for form processing</li>
+              <li>Understanding of performance optimization and best practices</li>
+              <li>Creating maintainable and well-structured component architecture</li>
+              <li>Implementing client-side functionality with proper state management</li>
+            </ul>
+          </div>
+        </motion.div>
       </div>
       <Footer />
     </div>

@@ -6,9 +6,11 @@ import Image from 'next/image';
 import { FaDownload, FaBasketballBall, FaCode, FaGlobeAmericas, FaLightbulb, FaUserTie, FaChevronDown } from 'react-icons/fa';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
-
+import { useLanguage } from '@/i18n';
+import SafeClientOnly from '@/components/SafeClientOnly';
 
 const AboutPage = () => {
+  const { t } = useLanguage();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Variants for staggered animations
@@ -33,53 +35,57 @@ const AboutPage = () => {
   };
 
   // Career timeline data
-  const timelineItems = [
+  const getTimelineItems = () => [
     {
       year: '2025 - 2027',
-      title: 'Graduate Student',
-      organization: 'Penn State University',
-      description: 'Pursuing a Master\'s degree in Software Engineering, focusing on software architecture, AI engineering, and project quality management to deepen expertise in full-stack development.'
+      title: t('about.timeline.graduateStudent.title'),
+      organization: t('about.timeline.graduateStudent.organization'),
+      description: t('about.timeline.graduateStudent.description')
     },
     {
       year: '2023 - Present',
-      title: 'Customer Support Specialist',
-      organization: 'TeamViewer',
-      description: 'Providing technical troubleshooting for enterprise software solutions with a 95% first-contact resolution rate, while optimizing support workflows and reducing issue resolution times by 20%.'
+      title: t('about.timeline.supportSpecialist.title'),
+      organization: t('about.timeline.supportSpecialist.organization'),
+      description: t('about.timeline.supportSpecialist.description')
     },
     {
       year: '2022 - 2023',
-      title: 'Inside Sales Representative',
-      organization: 'TeamViewer',
-      description: 'Delivered technical demonstrations of SaaS and enterprise software solutions, driving $1.5M+ in revenue and strengthening client relationships to increase upsell conversions.'
+      title: t('about.timeline.salesRep.title'),
+      organization: t('about.timeline.salesRep.organization'),
+      description: t('about.timeline.salesRep.description')
     },
     {
       year: '2021 - 2022',
-      title: 'Sales Development Representative',
-      organization: 'TeamViewer',
-      description: 'Exceeded quarterly sales targets through lead qualification and consultations, improving sales pipeline efficiency by 20% via strategic lead generation.'
+      title: t('about.timeline.salesDev.title'),
+      organization: t('about.timeline.salesDev.organization'),
+      description: t('about.timeline.salesDev.description')
     },
     {
       year: '2019 - 2023',
-      title: 'Bachelor\'s Degree',
-      organization: 'University of South Florida',
-      description: 'Earned a Bachelor\'s in Information Science with a concentration in Information Security and a minor in Entrepreneurship, graduating in December 2023.'
+      title: t('about.timeline.bachelors.title'),
+      organization: t('about.timeline.bachelors.organization'),
+      description: t('about.timeline.bachelors.description')
     }
   ];
+  
+  const timelineItems = getTimelineItems();
 
   // Personal traits based on assessment
-  const personalTraits = [
+  const getPersonalTraits = () => [
     {
-      category: "Diligent",
+      category: t('about.traits.diligent'),
       traits: ["Focused", "Goal-Oriented", "Dependable", "Determined", "Ambitious", "Organized"]
     },
     {
-      category: "Creative",
+      category: t('about.traits.creative'),
       traits: ["Imaginative", "Original", "Artistic", "Curious", "Visionary", "Unconventional"]
     }
   ];
+  
+  const personalTraits = getPersonalTraits();
 
   return (
-    <>
+    <SafeClientOnly>
       <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -109,24 +115,19 @@ const AboutPage = () => {
               {/* Intro Text */}
               <motion.div variants={itemVariants} className="max-w-2xl">
                 <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  About Me
+                  {t('about.title')}
                 </h1>
                 
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  Hi, I&apos;m Kender Saint-Juste, a Junior Software Developer from Tampa, Florida. I&apos;m currently pursuing my 
-                  Master&apos;s degree in Software Engineering at Penn State University (expected 2027).
+                  {t('about.intro.subtitle')}
                 </p>
                 
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  With a strong foundation in front-end and backend development, I&apos;m passionate about building 
-                  scalable web applications using JavaScript, React, Node.js, and MongoDB. My background in information security 
-                  and recent experience at TeamViewer has equipped me with valuable skills in troubleshooting, customer success, 
-                  and enterprise software solutions.
+                  {t('about.intro.description1')}
                 </p>
                 
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-                  When I&apos;m not coding, you can find me playing basketball (I&apos;m a huge Kobe Bryant fan), enjoying soccer, staying active, 
-                  or planning my next travel adventure. I balance my diligent work ethic with creative thinking and innovation.
+                  {t('about.intro.description2')}
                 </p>
                 
                 {/* Resume Downloads */}
@@ -138,7 +139,7 @@ const AboutPage = () => {
                     className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md shadow-md transition duration-300 transform hover:scale-105"
                   >
                     <FaDownload className="mr-2" />
-                    Download Resume (Dev)
+                    {t('about.resumeButtons.primary')}
                   </Link>
                   
                   {/* Dropdown for other resume options */}
@@ -147,7 +148,7 @@ const AboutPage = () => {
                       onClick={() => setDropdownOpen(!dropdownOpen)}
                       className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600/10 font-medium rounded-md transition duration-300"
                     >
-                      Other Resume Options
+                      {t('about.resumeButtons.dropdown')}
                       <FaChevronDown className="ml-2 h-4 w-4" />
                     </button>
                     
@@ -160,7 +161,7 @@ const AboutPage = () => {
                           className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-md"
                           onClick={() => setDropdownOpen(false)}
                         >
-                          General Resume
+                          {t('about.resumeButtons.general')}
                         </Link>
                         <Link
                           href="/resumes/Resume_Frontend.pdf"
@@ -169,7 +170,7 @@ const AboutPage = () => {
                           className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-b-md"
                           onClick={() => setDropdownOpen(false)}
                         >
-                          Frontend Resume
+                          {t('about.resumeButtons.frontend')}
                         </Link>
                       </div>
                     )}
@@ -188,18 +189,18 @@ const AboutPage = () => {
             >
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-                  Seeking Graduate Internship Opportunities
+                  {t('about.internship.title')}
                 </h2>
                 
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 dark:border-gray-700">
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                    I&apos;m actively seeking graduate-level software engineering internship opportunities where I can apply my academic knowledge and contribute to impactful projects. As a Master&apos;s student in Software Engineering at Penn State, I&apos;m eager to gain professional experience in a collaborative team environment.
+                    {t('about.internship.description')}
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-6 mt-8">
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                        Availability
+                        {t('about.internship.availability.title')}
                       </h3>
                       <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                         <li className="flex items-start">
@@ -208,7 +209,7 @@ const AboutPage = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span className="ml-2">Summer 2025 (Full-time)</span>
+                          <span className="ml-2">{t('about.internship.availability.fullTime')}</span>
                         </li>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 w-5 h-5 text-blue-600 mt-1">
@@ -216,7 +217,7 @@ const AboutPage = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span className="ml-2">Fall/Spring 2024-2025 (Part-time)</span>
+                          <span className="ml-2">{t('about.internship.availability.partTime')}</span>
                         </li>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 w-5 h-5 text-blue-600 mt-1">
@@ -224,14 +225,14 @@ const AboutPage = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span className="ml-2">Remote or Tampa, FL area</span>
+                          <span className="ml-2">{t('about.internship.availability.location')}</span>
                         </li>
                       </ul>
                     </div>
                     
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                        Interested Areas
+                        {t('about.internship.interests.title')}
                       </h3>
                       <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                         <li className="flex items-start">
@@ -240,7 +241,7 @@ const AboutPage = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span className="ml-2">Frontend Development (React, Next.js)</span>
+                          <span className="ml-2">{t('about.internship.interests.frontend')}</span>
                         </li>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 w-5 h-5 text-blue-600 mt-1">
@@ -248,7 +249,7 @@ const AboutPage = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span className="ml-2">Full-Stack Development</span>
+                          <span className="ml-2">{t('about.internship.interests.fullstack')}</span>
                         </li>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 w-5 h-5 text-blue-600 mt-1">
@@ -256,7 +257,7 @@ const AboutPage = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span className="ml-2">Web Application Development</span>
+                          <span className="ml-2">{t('about.internship.interests.webApp')}</span>
                         </li>
                       </ul>
                     </div>
@@ -267,7 +268,7 @@ const AboutPage = () => {
                       href="/contact"
                       className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition duration-300 transform hover:scale-105 shadow-md"
                     >
-                      Get In Touch About Opportunities
+                      {t('about.internship.cta')}
                     </Link>
                   </div>
                 </div>
@@ -283,7 +284,7 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                My Personal Traits
+                {t('about.traits.title')}
               </motion.h2>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -321,89 +322,89 @@ const AboutPage = () => {
             
             {/* Core Competencies */}
             <section className="mb-20">
-  <motion.h2 
-    className="text-2xl lg:text-3xl font-bold text-center text-gray-900 dark:text-white mb-8"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5 }}
-  >
-    Technical Skills
-  </motion.h2>
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold text-center text-gray-900 dark:text-white mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                {t('about.skills.title')}
+              </motion.h2>
   
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-    {[
-      { skill: "JavaScript/TypeScript", level: 85 },
-      { skill: "React/Next.js", level: 82 },
-      { skill: "HTML/CSS", level: 90 },
-      { skill: "Node.js/Express", level: 78 },
-      { skill: "MongoDB", level: 75 },
-      { skill: "Tailwind CSS", level: 88 },
-      { skill: "RESTful APIs", level: 80 },
-      { skill: "Git/GitHub", level: 85 },
-      { skill: "Responsive Design", level: 90 },
-      { skill: "Angular", level: 72 }
-    ].map((item, index) => (
-      <motion.div 
-        key={index} 
-        className="mb-2"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: index * 0.05 }}
-      >
-        <div className="flex justify-between mb-1">
-          <span className="text-gray-700 dark:text-gray-300 font-medium">{item.skill}</span>
-          <span className="text-gray-700 dark:text-gray-300">{item.level}%</span>
-        </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-          <motion.div 
-            className="bg-blue-600 h-2.5 rounded-full"
-            initial={{ width: 0 }}
-            whileInView={{ width: `${item.level}%` }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: index * 0.1 }}
-          ></motion.div>
-        </div>
-      </motion.div>
-    ))}
-  </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                {[
+                  { skill: "JavaScript/TypeScript", level: 85 },
+                  { skill: "React/Next.js", level: 82 },
+                  { skill: "HTML/CSS", level: 90 },
+                  { skill: "Node.js/Express", level: 78 },
+                  { skill: "MongoDB", level: 75 },
+                  { skill: "Tailwind CSS", level: 88 },
+                  { skill: "RESTful APIs", level: 80 },
+                  { skill: "Git/GitHub", level: 85 },
+                  { skill: "Responsive Design", level: 90 },
+                  { skill: "Angular", level: 72 }
+                ].map((item, index) => (
+                  <motion.div 
+                    key={index} 
+                    className="mb-2"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                  >
+                    <div className="flex justify-between mb-1">
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">{item.skill}</span>
+                      <span className="text-gray-700 dark:text-gray-300">{item.level}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                      <motion.div 
+                        className="bg-blue-600 h-2.5 rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${item.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: index * 0.1 }}
+                      ></motion.div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
   
-  <motion.h3 
-    className="text-xl font-bold text-gray-900 dark:text-white mt-12 mb-6"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5 }}
-  >
-    Additional Skills
-  </motion.h3>
+              <motion.h3 
+                className="text-xl font-bold text-gray-900 dark:text-white mt-12 mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                {t('about.skills.additional')}
+              </motion.h3>
   
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    {[
-      "Software & Web Development (MERN/MEAN Stack)",
-      "Version Control & CI/CD (Git, GitHub, GitLab)",
-      "Cloud Computing (AWS, Azure)",
-      "Software Testing & Debugging",
-      "Database Management (SQL, NoSQL)",
-      "Agile & Scrum Methodologies",
-      "RESTful APIs & Microservices",
-      "IT Support & Technical Troubleshooting",
-      "Customer Success & Account Management"
-    ].map((skill, index) => (
-      <motion.div
-        key={index}
-        className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.3, delay: index * 0.05 }}
-      >
-        <p className="text-gray-700 dark:text-gray-300">{skill}</p>
-      </motion.div>
-    ))}
-  </div>
-</section>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  "Software & Web Development (MERN/MEAN Stack)",
+                  "Version Control & CI/CD (Git, GitHub, GitLab)",
+                  "Cloud Computing (AWS, Azure)",
+                  "Software Testing & Debugging",
+                  "Database Management (SQL, NoSQL)",
+                  "Agile & Scrum Methodologies",
+                  "RESTful APIs & Microservices",
+                  "IT Support & Technical Troubleshooting",
+                  "Customer Success & Account Management"
+                ].map((skill, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                  >
+                    <p className="text-gray-700 dark:text-gray-300">{skill}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
             
             {/* My Journey Section */}
             <section className="mb-20">
@@ -414,7 +415,7 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                My Journey
+                {t('about.journey.title')}
               </motion.h2>
               
               <div className="relative">
@@ -423,71 +424,73 @@ const AboutPage = () => {
                 
                 {/* Timeline Items */}
                 <div className="space-y-16">
-                {timelineItems.map((item, index) => (
-  <motion.div 
-    key={index}
-    className={`relative flex flex-col lg:flex-row items-center lg:items-start ${
-      index % 2 === 0 ? 'lg:flex-row-reverse' : ''
-    }`}
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
-  >
-    {/* Timeline Dot */}
-    <div className="absolute left-0 lg:left-1/2 transform lg:-translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 border-4 border-white dark:border-gray-900 z-10"></div>
-    
-    {/* Date */}
-    <div className={`lg:w-1/2 pb-4 lg:pb-0 lg:px-8 text-center lg:text-right ${
-      index % 2 === 0 ? 'lg:text-left' : ''
-    }`}>
-      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-xs font-medium mb-2">
-        {item.year}
-      </span>
-    </div>
-    
-    {/* Content */}
-    <div className={`lg:w-1/2 pl-8 lg:px-8 ${
-      index % 2 === 0 ? 'lg:text-right' : ''
-    }`}>
-      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-        {item.title}
-      </h3>
-      <h4 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-3">
-        {item.organization}
-      </h4>
-      <p className="text-gray-700 dark:text-gray-300 mb-4">
-        {item.description}
-      </p>
-      
-      {/* Progress indicator for education items */}
-      {(item.title.includes('Student') || item.title.includes('Degree')) && (
-  <div className="mt-4 mb-2">
-    <div className="flex justify-between mb-1">
-      <span className="text-sm text-gray-600 dark:text-gray-400">Progress</span>
-      <span className="text-sm text-gray-600 dark:text-gray-400">
-        {item.title.includes('Graduate') || item.organization.includes('Penn State') ? '25%' : '100%'}
-      </span>
-    </div>
-    <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-      <div 
-        className="bg-blue-600 h-2.5 rounded-full" 
-        style={{ 
-          width: item.title.includes('Graduate') || item.organization.includes('Penn State') ? '25%' : '100%' 
-        }} 
-      ></div>
-    </div>
-    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-      {item.title.includes('Graduate') || item.organization.includes('Penn State') 
-        ? 'In Progress (Expected 2027)' 
-        : 'Completed December 2023'
-      }
-    </p>
-  </div>
-)}
-    </div>
-  </motion.div>
-))}
+                  {timelineItems.map((item, index) => (
+                    <motion.div 
+                      key={index}
+                      className={`relative flex flex-col lg:flex-row items-center lg:items-start ${
+                        index % 2 === 0 ? 'lg:flex-row-reverse' : ''
+                      }`}
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      {/* Timeline Dot */}
+                      <div className="absolute left-0 lg:left-1/2 transform lg:-translate-x-1/2 w-6 h-6 rounded-full bg-blue-600 border-4 border-white dark:border-gray-900 z-10"></div>
+                      
+                      {/* Date */}
+                      <div className={`lg:w-1/2 pb-4 lg:pb-0 lg:px-8 text-center lg:text-right ${
+                        index % 2 === 0 ? 'lg:text-left' : ''
+                      }`}>
+                        <span className="inline-block px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-xs font-medium mb-2">
+                          {item.year}
+                        </span>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className={`lg:w-1/2 pl-8 lg:px-8 ${
+                        index % 2 === 0 ? 'lg:text-right' : ''
+                      }`}>
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                          {item.title}
+                        </h3>
+                        <h4 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-3">
+                          {item.organization}
+                        </h4>
+                        <p className="text-gray-700 dark:text-gray-300 mb-4">
+                          {item.description}
+                        </p>
+                        
+                        {/* Progress indicator for education items */}
+                        {(item.title.includes('Student') || item.title.includes('Degree') || 
+                          item.title.includes(t('about.timeline.graduateStudent.title')) || 
+                          item.title.includes(t('about.timeline.bachelors.title'))) && (
+                          <div className="mt-4 mb-2">
+                            <div className="flex justify-between mb-1">
+                              <span className="text-sm text-gray-600 dark:text-gray-400">{t('about.journey.progress')}</span>
+                              <span className="text-sm text-gray-600 dark:text-gray-400">
+                                {item.title.includes('Graduate') || item.organization.includes('Penn State') ? '25%' : '100%'}
+                              </span>
+                            </div>
+                            <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                              <div 
+                                className="bg-blue-600 h-2.5 rounded-full" 
+                                style={{ 
+                                  width: item.title.includes('Graduate') || item.organization.includes('Penn State') ? '25%' : '100%' 
+                                }} 
+                              ></div>
+                            </div>
+                            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                              {item.title.includes('Graduate') || item.organization.includes('Penn State') 
+                                ? t('about.journey.inProgress')
+                                : t('about.journey.completed')
+                              }
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
             </section>
@@ -501,7 +504,7 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                Passions & Interests
+                {t('about.passions.title')}
               </motion.h2>
               
               <div className="grid md:grid-cols-3 gap-8">
@@ -516,10 +519,10 @@ const AboutPage = () => {
                     <FaBasketballBall />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    Sports & Activities
+                    {t('about.passions.sports.title')}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Basketball enthusiast (huge Kobe Bryant fan), soccer player, and fitness advocate. Staying active is an essential part of my routine that helps me maintain focus and creativity.
+                    {t('about.passions.sports.description')}
                   </p>
                 </motion.div>
                 
@@ -534,10 +537,10 @@ const AboutPage = () => {
                     <FaCode />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    Technology & Programming
+                    {t('about.passions.tech.title')}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Fascinated by the power of code to transform ideas into reality. I enjoy exploring new frameworks, building projects, and staying current with emerging technologies like artificial intelligence.
+                    {t('about.passions.tech.description')}
                   </p>
                 </motion.div>
                 
@@ -552,50 +555,50 @@ const AboutPage = () => {
                     <FaGlobeAmericas />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    Travel & Exploration
+                    {t('about.passions.travel.title')}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Love experiencing new cultures, cuisines, and perspectives through travel. Each journey provides fresh inspiration and broadens my understanding of user needs across different contexts.
+                    {t('about.passions.travel.description')}
                   </p>
                 </motion.div>
               </div>
             </section>
             
-            {/* Goals Section */}
-            <section className="pb-20">
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-bold text-center text-gray-900 dark:text-white mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                Professional Goals
-              </motion.h2>
-              
-              <motion.div 
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 text-white"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                <p className="text-lg mb-6">
-                  My immediate goal is to transition fully into a Junior Software Developer role, leveraging my experience and education to create impactful applications that address real-world challenges.
-                </p>
-                <p className="text-lg mb-6">
-                  I aim to deepen my expertise in full-stack development, system design, and CI/CD automation through my Master&apos;s program and hands-on projects.
-                </p>
-                <p className="text-lg">
-                  Long-term, I aspire to launch my own technology company, combining my software engineering skills, information security background, and entrepreneurial mindset to develop innovative solutions that make a difference.
-                </p>
-              </motion.div>
-            </section>
-          </div>
+           {/* Goals Section */}
+<section className="pb-20">
+  <motion.h2 
+    className="text-2xl lg:text-3xl font-bold text-center text-gray-900 dark:text-white mb-8"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+  >
+    {t('about.goals.title')}
+  </motion.h2>
+  
+  <motion.div 
+    className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 text-white"
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+  >
+    <p className="text-lg mb-6">
+      {t('about.goals.shortTerm')}
+    </p>
+    <p className="text-lg mb-6">
+      {t('about.goals.midTerm')}
+    </p>
+    <p className="text-lg">
+      {t('about.goals.longTerm')}
+    </p>
+  </motion.div>
+</section>
+</div>
         </div>
       </div>
       <Footer />
-    </>
+    </SafeClientOnly>
   );
 };
 

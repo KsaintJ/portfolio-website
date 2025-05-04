@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useLanguage } from '@/i18n';
 
 type ProjectCardProps = {
   title: string;
@@ -27,6 +28,7 @@ const ProjectCard = ({
   link,
 }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <motion.div
@@ -111,7 +113,7 @@ const ProjectCard = ({
           href={link}
           className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors"
         >
-          View Details
+          {t('projects.viewDetails')}
           <svg
             className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1"
             fill="none"

@@ -4,8 +4,10 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
 import Link from 'next/link';
+import { useLanguage } from '@/i18n';
 
 const Hero = () => {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -115,22 +117,21 @@ const Hero = () => {
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
               variants={itemVariants}
             >
-              Hi, I&apos;m <span className="text-blue-600">Kender Saint-Juste</span>
+              {t('hero.title')}
             </motion.h1>
             
             <motion.h2 
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
               variants={itemVariants}
             >
-              MERN/MEAN Stack Developer
+              {t('hero.subtitle')}
             </motion.h2>
             
             <motion.p 
               className="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-xl"
               variants={itemVariants}
             >
-              I craft responsive, user-focused web applications with React, Next.js, and 
-              modern JavaScript. Currently pursuing my Master&apos;s in Software Engineering at Penn State.
+              {t('hero.description')}
             </motion.p>
             
             <motion.div 
@@ -138,11 +139,11 @@ const Hero = () => {
               variants={itemVariants}
             >
               <Link href="/projects" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 hover:translate-y-[-2px] shadow-md">
-                View My Work
+                {t('hero.cta.work')}
               </Link>
               
               <Link href="/contact" className="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600/10 font-medium rounded-lg transition duration-300 hover:translate-y-[-2px]">
-                Get In Touch
+                {t('hero.cta.contact')}
               </Link>
             </motion.div>
             
