@@ -37,13 +37,13 @@ const AboutPage = () => {
   // Career timeline data
   const getTimelineItems = () => [
     {
-      year: '2025 - 2027',
+      year: '2026 - Present',
       title: t('about.timeline.graduateStudent.title'),
       organization: t('about.timeline.graduateStudent.organization'),
       description: t('about.timeline.graduateStudent.description')
     },
     {
-      year: '2023 - Present',
+      year: '2021 - 2026',
       title: t('about.timeline.supportSpecialist.title'),
       organization: t('about.timeline.supportSpecialist.organization'),
       description: t('about.timeline.supportSpecialist.description')
@@ -133,7 +133,7 @@ const AboutPage = () => {
                 {/* Resume Downloads */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    href="/resumes/Resume_Junior_Dev.pdf" 
+                    href="/resumes/KSJ_SE_Resume.pdf" 
                     target="_blank"
                     rel="noopener noreferrer" 
                     className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md shadow-md transition duration-300 transform hover:scale-105"
@@ -155,7 +155,7 @@ const AboutPage = () => {
                     {dropdownOpen && (
                       <div className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                         <Link
-                          href="/resumes/Resume_General.pdf"
+                          href="/resumes/KSJ_SE_Resume.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-md"
@@ -164,7 +164,7 @@ const AboutPage = () => {
                           {t('about.resumeButtons.general')}
                         </Link>
                         <Link
-                          href="/resumes/Resume_Frontend.pdf"
+                          href="/resumes/KSJ_GRC_Resume.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-b-md"
@@ -334,16 +334,16 @@ const AboutPage = () => {
   
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                 {[
-                  { skill: "JavaScript/TypeScript", level: 85 },
-                  { skill: "React/Next.js", level: 82 },
-                  { skill: "HTML/CSS", level: 90 },
-                  { skill: "Node.js/Express", level: 78 },
-                  { skill: "MongoDB", level: 75 },
-                  { skill: "Tailwind CSS", level: 88 },
-                  { skill: "RESTful APIs", level: 80 },
+                  { skill: "JavaScript/TypeScript", level: 82 },
+                  { skill: "React/Next.js", level: 80 },
+                  { skill: "Python", level: 78 },
+                  { skill: "Node.js/Express", level: 75 },
+                  { skill: "Google Workspace APIs / OAuth 2.0", level: 85 },
+                  { skill: "IAM / Access Governance", level: 90 },
+                  { skill: "RESTful APIs & System Design", level: 80 },
                   { skill: "Git/GitHub", level: 85 },
-                  { skill: "Responsive Design", level: 90 },
-                  { skill: "Angular", level: 72 }
+                  { skill: "SQL / MongoDB", level: 72 },
+                  { skill: "SOC 2 / NIST CSF / GRC Frameworks", level: 85 }
                 ].map((item, index) => (
                   <motion.div 
                     key={index} 
@@ -382,15 +382,15 @@ const AboutPage = () => {
   
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  "Software & Web Development (MERN/MEAN Stack)",
-                  "Version Control & CI/CD (Git, GitHub, GitLab)",
-                  "Cloud Computing (AWS, Azure)",
-                  "Software Testing & Debugging",
-                  "Database Management (SQL, NoSQL)",
+                  "Full-Stack Development (Next.js, React, Node.js)",
+                  "SaaS Product Development (Least by Juste™ — live)",
+                  "Google Workspace Admin SDK & OAuth 2.0",
+                  "Access Reviews, RBAC, JML Lifecycle Controls",
+                  "SOC 2, NIST CSF, HIPAA Compliance Frameworks",
                   "Agile & Scrum Methodologies",
-                  "RESTful APIs & Microservices",
-                  "IT Support & Technical Troubleshooting",
-                  "Customer Success & Account Management"
+                  "Docker & Cloud Deployment (Vercel, Railway)",
+                  "Enterprise SaaS Sales & Technical Demonstrations",
+                  "Customer Success & Solutions Engineering"
                 ].map((skill, index) => (
                   <motion.div
                     key={index}

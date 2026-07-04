@@ -12,8 +12,8 @@ export default {
   },
   hero: {
     title: "Hi, I'm Kender Saint-Juste",
-    subtitle: "MERN/MEAN Stack Developer",
-    description: "I craft responsive, user-focused web applications with React, Next.js, and modern JavaScript. Currently pursuing my Master's in Software Engineering at Penn State.",
+    subtitle: "Founder · Solutions Engineer · Builder",
+    description: "I build products at the intersection of access governance, AI, and software engineering. Founder & CEO of Juste™ LLC — creator of Least by Juste™, a live SaaS product for Google Workspace access review automation.",
     cta: {
       work: "View My Work",
       contact: "Get In Touch"
@@ -21,7 +21,7 @@ export default {
   },
   skills: {
     title: "My Skills",
-    description: "I've developed expertise in various technologies across the full stack, with an emphasis on JavaScript frameworks and libraries.",
+    description: "Full-stack technical background spanning access governance, SaaS product development, and enterprise security — built through 12+ years of professional experience and live product work.",
     categories: {
       all: "All Skills",
       frontend: "Frontend",
@@ -31,31 +31,24 @@ export default {
     otherTech: "Other Technologies I Use"
   },
   projects: {
-    // Main projects page
     title: "My Projects",
-    subtitle: "Here's a collection of my recent work, showcasing my skills in frontend and full-stack development.",
+    subtitle: "A collection of work spanning SaaS product development, healthcare systems, and full-stack engineering.",
     searchPlaceholder: "Search projects...",
     noResults: "No projects match your criteria. Try adjusting your filters.",
     loadMore: "Load More Projects",
     viewDetails: "View Details",
     backToProjects: "Back to Projects",
-    
-    // Project filters
     filters: {
       all: "All Projects",
       frontend: "Frontend",
       backend: "Backend",
       fullStack: "Full Stack"
     },
-    
-    // More on GitHub section
     moreOnGitHub: {
       title: "More on GitHub",
-      description: "Beyond the projects showcased above, you can explore more of my work and code contributions on GitHub. I'm constantly learning and building new things!",
+      description: "Beyond the projects showcased here, explore more of my work on GitHub — including my IAM/GRC portfolio demonstrating access governance, RBAC, and SOC 2 audit evidence artifacts.",
       viewProfile: "View GitHub Profile"
     },
-    
-    // Common sections for project detail pages
     details: {
       overview: "Project Overview",
       keyFeatures: "Key Features",
@@ -71,13 +64,10 @@ export default {
       testingStats: "Testing Statistics",
       coverage: "Code Coverage"
     },
-    
-    // Individual project translations
     items: {
-      // Elderly Care Management System
       elderlyCare: {
-        title: "Elderly Care Management System",
-        description: "A comprehensive web application for managing elderly care facilities, tracking patient information, and coordinating staff schedules.",
+        title: "OneCare — Elderly Care Management System",
+        description: "A comprehensive web application for managing elderly care facilities, tracking patient information, and coordinating staff schedules. The foundation of OneCare by Juste™, now being developed into an AI-powered elderly care platform.",
         features: [
           "Patient information management and tracking",
           "Staff scheduling and coordination",
@@ -89,12 +79,12 @@ export default {
           dataPrivacy: {
             title: "Challenge: Data Privacy & HIPAA Compliance",
             description: "Ensuring sensitive patient data was securely stored and accessed while maintaining compliance with healthcare privacy regulations.",
-            solution: "I implemented encrypted data storage, strict access controls, and audit logging to maintain compliance with healthcare privacy standards and protect sensitive patient information."
+            solution: "Implemented encrypted data storage, strict access controls, and audit logging to maintain compliance with healthcare privacy standards and protect sensitive patient information."
           },
           realTime: {
             title: "Challenge: Real-time Communication",
             description: "Creating a reliable system for real-time alerts and notifications for critical patient events.",
-            solution: "I integrated Socket.IO to enable real-time notifications, implemented a priority-based alert system, and ensured message delivery confirmation for critical communications."
+            solution: "Integrated Socket.IO to enable real-time notifications, implemented a priority-based alert system, and ensured message delivery confirmation for critical communications."
           }
         },
         technologies: [
@@ -108,7 +98,7 @@ export default {
         },
         projectType: {
           title: "Project Type",
-          academic: "Academic Project",
+          academic: "Academic Project → Active Product",
           fullstack: "Full-Stack Application",
           domain: "Healthcare Domain"
         },
@@ -135,7 +125,7 @@ export default {
           "Building accessible interfaces for users with varying technical proficiency",
           "Integrating comprehensive reporting and analytics features"
         ],
-        relevanceIntro: "This project demonstrates skills that are directly applicable to full-stack development roles in healthcare and beyond:",
+        relevanceIntro: "This project demonstrates skills directly applicable to full-stack development roles in healthcare and beyond:",
         relevancePoints: [
           "Creating secure, compliant applications for highly regulated industries",
           "Building complex data management systems with multiple user types and permission levels",
@@ -144,8 +134,6 @@ export default {
           "Working with healthcare domain knowledge and specialized requirements"
         ]
       },
-      
-      // Frontend Authentication System
       frontendAuth: {
         title: "Frontend Authentication System",
         description: "A modern web application implementing secure authentication and API integration, with comprehensive error handling and thorough testing coverage.",
@@ -160,18 +148,18 @@ export default {
         challenges: {
           auth: {
             title: "Challenge: Secure Authentication Flow",
-            description: "Implementing a secure authentication flow with proper token management, expiration handling, and refresh mechanisms was complex.",
-            solution: "I designed a robust authentication service using HTTP-only cookies for token storage, implemented token refresh mechanisms, and built proper logout functionality that cleared all auth state."
+            description: "Implementing a secure authentication flow with proper token management, expiration handling, and refresh mechanisms.",
+            solution: "Designed a robust authentication service using HTTP-only cookies for token storage, implemented token refresh mechanisms, and built proper logout functionality that cleared all auth state."
           },
           error: {
             title: "Challenge: Comprehensive Error Handling",
             description: "Error handling needed to be comprehensive yet user-friendly, covering network errors, validation errors, and authentication failures.",
-            solution: "I implemented a centralized error handling system that categorized errors by type and displayed appropriate user-friendly messages without exposing sensitive technical details."
+            solution: "Implemented a centralized error handling system that categorized errors by type and displayed appropriate user-friendly messages without exposing sensitive technical details."
           },
           mfa: {
             title: "Challenge: Multi-Factor Authentication",
-            description: "Adding MFA while maintaining a smooth user experience was challenging.",
-            solution: "I implemented a step-by-step verification process with clear instructions and fallback options for users. The system supports both app-based and SMS verification methods."
+            description: "Adding MFA while maintaining a smooth user experience.",
+            solution: "Implemented a step-by-step verification process with clear instructions and fallback options. The system supports both app-based and SMS verification methods."
           }
         },
         codeSnippets: {
@@ -185,52 +173,23 @@ export default {
           }
         },
         screenshots: {
-          login: {
-            alt: "Login Page",
-            caption: "Secure authentication interface with form validation"
-          },
-          dashboard: {
-            alt: "Dashboard",
-            caption: "Protected dashboard with user-specific content"
-          },
-          oauth: {
-            alt: "Google OAuth Integration",
-            caption: "Social login integration for seamless authentication"
-          },
-          success: {
-            alt: "Success Messages",
-            caption: "User-friendly feedback for successful operations"
-          },
-          mfa: {
-            alt: "Multi-Factor Authentication",
-            caption: "Enhanced security with multi-factor authentication"
-          },
-          stats: {
-            alt: "Real-time Statistics",
-            caption: "Live data visualization for dynamic user metrics"
-          }
+          login: { alt: "Login Page", caption: "Secure authentication interface with form validation" },
+          dashboard: { alt: "Dashboard", caption: "Protected dashboard with user-specific content" },
+          oauth: { alt: "Google OAuth Integration", caption: "Social login integration for seamless authentication" },
+          success: { alt: "Success Messages", caption: "User-friendly feedback for successful operations" },
+          mfa: { alt: "Multi-Factor Authentication", caption: "Enhanced security with multi-factor authentication" },
+          stats: { alt: "Real-time Statistics", caption: "Live data visualization for dynamic user metrics" }
         },
         testingStats: {
-          unit: {
-            title: "Unit Tests",
-            count: "24 tests"
-          },
-          integration: {
-            title: "Integration Tests",
-            count: "12 tests"
-          },
-          coverage: {
-            title: "Code Coverage",
-            percentage: "92%"
-          }
+          unit: { title: "Unit Tests", count: "24 tests" },
+          integration: { title: "Integration Tests", count: "12 tests" },
+          coverage: { title: "Code Coverage", percentage: "92%" }
         }
       },
-      
-      // Backend News API
       backendNews: {
         title: "Backend News API Service",
-        description: "A robust RESTful API built with Node.js, Express, and MongoDB that provides a comprehensive solution for managing news articles. This API supports full CRUD operations, user authentication, role-based access control, and advanced querying capabilities.",
-        context: "Developed as part of my coursework at Penn State University, this project demonstrates my proficiency in building secure, scalable, and well-structured backend systems that follow industry best practices.",
+        description: "A robust RESTful API built with Node.js, Express, and MongoDB providing full CRUD operations, JWT authentication, role-based access control, and advanced querying capabilities.",
+        context: "Developed as part of Penn State University coursework, this project demonstrates proficiency in building secure, scalable backend systems following industry best practices.",
         features: [
           "RESTful API with complete CRUD operations",
           "JWT-based authentication and authorization",
@@ -242,19 +201,19 @@ export default {
           "Detailed API documentation"
         ],
         technologies: [
-          "Node.js", "Express", "MongoDB", "Mongoose", 
+          "Node.js", "Express", "MongoDB", "Mongoose",
           "JWT Authentication", "RESTful API", "API Testing", "Postman"
         ],
         challenges: {
           secure: {
             title: "Challenge: Secure Authentication",
             description: "Implementing a secure authentication system with proper token handling and role-based access.",
-            solution: "I built a robust JWT-based authentication system with middleware that verifies tokens, extracts user information, and performs role checks. The solution includes token expiration, refresh mechanisms, and protection against common vulnerabilities."
+            solution: "Built a robust JWT-based authentication system with middleware that verifies tokens, extracts user information, and performs role checks — including token expiration, refresh mechanisms, and protection against common vulnerabilities."
           },
           query: {
             title: "Challenge: Advanced Querying",
             description: "Providing flexible API endpoints that support pagination, filtering, and sorting.",
-            solution: "I implemented a dynamic query builder that processes request parameters to construct MongoDB queries. This allows clients to filter by multiple criteria, sort by any field, and paginate results efficiently."
+            solution: "Implemented a dynamic query builder that processes request parameters to construct MongoDB queries, allowing clients to filter by multiple criteria, sort by any field, and paginate results efficiently."
           }
         },
         techDetails: {
@@ -271,39 +230,17 @@ export default {
           models: "Database Models"
         },
         codeSnippets: {
-          article: {
-            title: "Article Controller"
-          },
-          auth: {
-            title: "Authentication Middleware"
-          }
+          article: { title: "Article Controller" },
+          auth: { title: "Authentication Middleware" }
         },
         screenshotsTitle: "API Testing Screenshots",
         screenshots: {
-          apiSave: {
-            alt: "API Save Endpoint",
-            caption: "Successful POST request saving multiple news articles"
-          },
-          articleCreate: {
-            alt: "Article Creation",
-            caption: "Creating a new article with JSON payload"
-          },
-          getAllArticles: {
-            alt: "Get All Articles",
-            caption: "Retrieving all articles with pagination support"
-          },
-          articleUpdate: {
-            alt: "Article Update",
-            caption: "Updating article content via PATCH request"
-          },
-          articleDelete: {
-            alt: "Article Deletion",
-            caption: "Removing an article from the database"
-          },
-          afterDelete: {
-            alt: "After Deletion",
-            caption: "Verification that article has been removed from database"
-          }
+          apiSave: { alt: "API Save Endpoint", caption: "Successful POST request saving multiple news articles" },
+          articleCreate: { alt: "Article Creation", caption: "Creating a new article with JSON payload" },
+          getAllArticles: { alt: "Get All Articles", caption: "Retrieving all articles with pagination support" },
+          articleUpdate: { alt: "Article Update", caption: "Updating article content via PATCH request" },
+          articleDelete: { alt: "Article Deletion", caption: "Removing an article from the database" },
+          afterDelete: { alt: "After Deletion", caption: "Verification that article has been removed from database" }
         },
         lessonsIntro: "This project provided valuable insights into building robust backend systems:",
         lessons: [
@@ -313,21 +250,19 @@ export default {
           "Working with MongoDB and Mongoose for efficient data operations",
           "Implementing role-based access control for API security"
         ],
-        relevanceIntro: "This project showcases backend skills that are valuable for various development positions:",
+        relevanceIntro: "This project showcases backend skills valuable for development and solutions engineering positions:",
         relevancePoints: [
-          "Designing and implementing RESTful APIs - a fundamental skill for backend roles",
-          "Creating secure authentication and authorization systems - critical for data protection",
-          "Working with databases and designing efficient schemas - essential for data-driven applications",
-          "Implementing proper error handling and validation - necessary for robust production applications",
-          "Testing and documenting APIs - demonstrates professional development practices",
-          "Leveraging my information security background to build secure backend systems"
+          "Designing and implementing RESTful APIs — a fundamental skill for backend and SE roles",
+          "Creating secure authentication and authorization systems — critical for enterprise SaaS",
+          "Working with databases and designing efficient schemas — essential for data-driven applications",
+          "Implementing proper error handling and validation — necessary for production applications",
+          "Testing and documenting APIs — demonstrates professional development practices",
+          "Leveraging information security background to build secure backend systems"
         ]
       },
-      
-      // Portfolio Website
       portfolio: {
         title: "Personal Portfolio Website",
-        description: "This portfolio website showcases my software development skills and projects. Built with modern web technologies including Next.js, React, and Tailwind CSS, the site features responsive design, interactive animations, dark mode support, and multi-language capabilities to create an engaging user experience.",
+        description: "This portfolio website showcases software development skills and live product work. Built with Next.js, React, and Tailwind CSS — featuring responsive design, interactive animations, dark mode, and multi-language support (English, French, Haitian Creole, Spanish).",
         svgTitle: "Portfolio Website",
         features: [
           "Responsive design for optimal viewing on all devices",
@@ -345,17 +280,17 @@ export default {
           i18n: {
             title: "Challenge: Internationalization",
             description: "Implementing multi-language support while maintaining a smooth user experience and managing translation files effectively.",
-            solution: "I implemented a React Context-based language system with localStorage persistence, creating a flexible translation structure that works seamlessly across all components."
+            solution: "Implemented a React Context-based language system with localStorage persistence, creating a flexible translation structure that works seamlessly across all components."
           },
           animations: {
             title: "Challenge: Performance-Optimized Animations",
             description: "Creating smooth animations without causing performance issues or hydration mismatches with server-side rendering.",
-            solution: "I created custom SafeClientOnly components to handle client-side animations without hydration mismatches, and optimized animation performance using Framer Motion's best practices."
+            solution: "Created custom SafeClientOnly components to handle client-side animations without hydration mismatches, and optimized animation performance using Framer Motion's best practices."
           },
           darkMode: {
             title: "Challenge: Dark Mode Implementation",
             description: "Implementing a dark mode that respects user preferences and persists across visits.",
-            solution: "I used next-themes to implement a robust theme system with proper preference persistence, system preference detection, and smooth transitions between themes."
+            solution: "Used next-themes to implement a robust theme system with proper preference persistence, system preference detection, and smooth transitions between themes."
           }
         },
         techDetails: {
@@ -375,18 +310,9 @@ export default {
           creole: "Haitian Creole"
         },
         screenshots: {
-          homepage: {
-            alt: "Portfolio Homepage",
-            caption: "Modern, responsive homepage with interactive animations"
-          },
-          projects: {
-            alt: "Projects Page",
-            caption: "Project listing page with filtering and search functionality"
-          },
-          darkMode: {
-            alt: "Dark Mode",
-            caption: "Seamless dark mode implementation with theme persistence"
-          }
+          homepage: { alt: "Portfolio Homepage", caption: "Modern, responsive homepage with interactive animations" },
+          projects: { alt: "Projects Page", caption: "Project listing page with filtering and search functionality" },
+          darkMode: { alt: "Dark Mode", caption: "Seamless dark mode implementation with theme persistence" }
         },
         lessonsIntro: "This project provided valuable insights and learning opportunities:",
         lessons: [
@@ -397,7 +323,7 @@ export default {
           "Managing theme preferences with proper persistence",
           "Structuring a project for maintainability and future expansion"
         ],
-        relevanceIntro: "This project demonstrates skills that are directly applicable to frontend and full-stack development roles:",
+        relevanceIntro: "This project demonstrates skills directly applicable to frontend and full-stack development roles:",
         relevancePoints: [
           "Building modern web applications with Next.js and React",
           "Creating responsive, accessible user interfaces with Tailwind CSS",
@@ -410,12 +336,12 @@ export default {
     }
   },
   cta: {
-    title: "Ready to Work Together?",
-    description: "I'm currently seeking internship opportunities for Summer 2025 as a Junior Developer, Frontend Developer, or similar positions that align with my MERN/MEAN stack expertise. As a first-semester software engineering student, I'm eager to apply my skills in real-world contexts through internships, freelance projects, and collaboration opportunities.",
-    button: "Let's Connect"
+    title: "Let's Build Something Together",
+    description: "I'm actively pursuing Solutions Engineer, Technical Program Manager, and full-stack development roles in Tampa, FL. As the founder of Juste™ LLC and builder of Least by Juste™, I bring 12+ years of professional experience, live product credibility, and technical depth across IAM, SaaS, and software engineering.",
+    button: "Get In Touch"
   },
   footer: {
-    description: "Software developer specializing in frontend and full-stack development with React, Next.js, and modern JavaScript.",
+    description: "Founder & CEO of Juste™ LLC. Builder of Least by Juste™ — access review automation for Google Workspace. Solutions Engineer and full-stack developer.",
     rights: "All rights reserved",
     madeWith: "Made with",
     usingTech: "using Next.js, React, and Tailwind CSS",
@@ -427,35 +353,35 @@ export default {
   about: {
     title: "About Me",
     intro: {
-      subtitle: "Hello, I'm Kender Saint-Juste, a Junior Developer from Tampa, Florida. I'm currently pursuing my Master's in Software Engineering at Penn State University (expected 2027).",
-      description1: "With a strong foundation in frontend and backend development, I'm passionate about creating scalable web applications using JavaScript, React, Node.js, and MongoDB. My information security background and recent experience at TeamViewer have equipped me with valuable skills in troubleshooting, customer success, and enterprise software solutions.",
-      description2: "When I'm not coding, you can find me playing basketball (I'm a big Kobe Bryant fan), enjoying soccer, staying active, or planning my next travel adventure. I balance my diligent work ethic with creative thinking and innovation."
+      subtitle: "I'm Kender Saint-Juste — Founder & CEO of Juste™ LLC, Solutions Engineer candidate, and full-stack builder based in Tampa, Florida.",
+      description1: "I build products at the intersection of access governance, AI, and software engineering. Least by Juste™ (app.getleast.io) is my live SaaS product — an access review automation tool for Google Workspace that generates SOC 2-aligned audit evidence for SMBs. OneCare by Juste™ is my early-stage elderly care AI platform.",
+      description2: "My background spans 12+ years across enterprise SaaS sales and support (TeamViewer), IAM and GRC consulting, and hands-on product development. I hold a B.S. in Information Science with a concentration in Information Security and a minor in Entrepreneurship from USF (3.76 GPA). I'm trilingual — English, French, and Haitian Creole."
     },
     resumeButtons: {
-      primary: "Download Resume (Dev)",
-      dropdown: "Other Resume Options",
-      general: "General Resume",
-      frontend: "Frontend Resume"
+      primary: "Download Resume",
+      dropdown: "Resume Options",
+      general: "Solutions Engineer Resume",
+      frontend: "GRC Analyst Resume"
     },
     internship: {
-      title: "Looking for Internship Opportunities",
-      description: "I'm actively seeking software engineering internship opportunities where I can apply my academic knowledge and contribute to impactful projects. As a Master's student in Software Engineering at Penn State, I'm eager to gain professional experience in a collaborative team environment.",
+      title: "Open to Opportunities",
+      description: "I'm actively pursuing Solutions Engineer, Technical Program Manager, GRC Analyst, and full-stack development roles. I bring live product experience, 12+ years of professional background, and genuine technical depth — not just credentials.",
       availability: {
         title: "Availability",
-        fullTime: "Summer 2025 (Full-time)",
-        partTime: "Fall/Spring 2024-2025 (Part-time)",
-        location: "Remote or Tampa, FL area"
+        fullTime: "Immediately available — full-time",
+        partTime: "Open to contract-to-hire",
+        location: "Tampa, FL (permanently based) — open to remote"
       },
       interests: {
-        title: "Areas of Interest",
-        frontend: "Frontend Development (React, Next.js)",
-        fullstack: "Full-Stack Development",
-        webApp: "Web Application Development"
+        title: "Target Roles",
+        frontend: "Solutions Engineer / Pre-Sales Engineer",
+        fullstack: "Technical Program Manager",
+        webApp: "GRC Analyst / Information Security Analyst"
       },
-      cta: "Contact Me for Opportunities"
+      cta: "Contact Me"
     },
     traits: {
-      title: "My Personal Traits",
+      title: "Personal Traits",
       diligent: "Diligent",
       creative: "Creative"
     },
@@ -466,91 +392,91 @@ export default {
     journey: {
       title: "My Journey",
       progress: "Progress",
-      inProgress: "In Progress (Expected 2027)",
+      inProgress: "On Pause — Exploring CS/AI Master's Programs",
       completed: "Completed December 2023"
     },
     passions: {
       title: "Passions & Interests",
       sports: {
         title: "Sports & Activities",
-        description: "Passionate about basketball (big Kobe Bryant fan), soccer player, and fitness enthusiast. Staying active is an essential part of my routine that helps me maintain my focus and creativity."
+        description: "Passionate about basketball (lifelong Kobe Bryant fan), soccer, and staying active. Sport keeps me disciplined, competitive, and creative — the same mindset I bring to building products."
       },
       tech: {
-        title: "Technology & Programming",
-        description: "Fascinated by the power of code to transform ideas into reality. I love exploring new frameworks, building projects, and staying current with emerging technologies like artificial intelligence."
+        title: "Technology & Building",
+        description: "I build things. Least by Juste™ is live. OneCare is in development. I'm learning to code without AI dependency — I want to explain every line I write. The goal is genuine technical fluency, not credential collection."
       },
       travel: {
-        title: "Travel & Exploration",
-        description: "I love discovering new cultures, cuisines, and perspectives through travel. Each trip brings new inspiration and broadens my understanding of users' needs in different contexts."
+        title: "Travel & Family",
+        description: "Originally from Haiti and Port St. Lucie, FL — now permanently in Tampa with my wife Mariah and two sons. Travel shaped how I think about building for diverse users and why I built multilingual support into this very portfolio."
       }
     },
     goals: {
       title: "Professional Goals",
-      shortTerm: "My immediate goal is to fully transition into a Junior Developer role, using my experience and education to create impactful applications that address real-world challenges.",
-      midTerm: "I aim to deepen my expertise in full-stack development, system design, and CI/CD automation through my Master's program and hands-on projects.",
-      longTerm: "Long-term, I aspire to launch my own technology company, combining my software engineering skills, information security experience, and entrepreneurial spirit to develop innovative solutions that make a difference."
+      shortTerm: "Land a Solutions Engineer or GRC Analyst role that leverages my IAM domain expertise, technical aptitude, and live product experience at Juste™ LLC.",
+      midTerm: "Complete a master's degree in Computer Science or AI (USF MSAI, target Fall 2027) while growing Least by Juste™ to paying customers and building technical fluency in Python and full-stack engineering.",
+      longTerm: "Build Juste™ LLC into a company that solves real problems in access governance and elderly care AI — carrying the Saint-Juste name forward through what I build, not just what I say."
     },
     timeline: {
       graduateStudent: {
-        title: "Graduate Student",
-        organization: "Penn State University",
-        description: "Pursuing a Master's in Software Engineering, focusing on software architecture, AI engineering, and project quality management to deepen full-stack development expertise."
+        title: "Founder & CEO",
+        organization: "Juste™ LLC",
+        description: "Founded March 2026. Building Least by Juste™ (app.getleast.io) — access review automation SaaS for Google Workspace — and OneCare by Juste™, an early-stage elderly care AI platform."
       },
       supportSpecialist: {
         title: "Customer Support Specialist",
         organization: "TeamViewer",
-        description: "Providing technical troubleshooting for enterprise software solutions with a 95% first-contact resolution rate, while optimizing support workflows and reducing problem resolution times by 20%."
+        description: "Technical troubleshooting for enterprise remote access software. IAM, SSO/SAML, 2FA/MFA configuration, Conditional Access policy support, and SOC 2/HIPAA compliance-adjacent customer environments."
       },
       salesRep: {
-        title: "Sales Representative",
+        title: "Inside Sales Representative",
         organization: "TeamViewer",
-        description: "Conducting technical demonstrations of SaaS and enterprise software solutions, generating over $1.5 million in revenue and strengthening customer relationships to increase upsell conversions."
+        description: "Technical demonstrations of enterprise SaaS solutions, generating over $1.5M in revenue and strengthening customer relationships through consultative selling."
       },
       salesDev: {
         title: "Sales Development Representative",
         organization: "TeamViewer",
-        description: "Exceeding quarterly sales targets through prospect qualification and consultations, improving sales pipeline efficiency by 20% through strategic lead generation."
+        description: "Exceeded quarterly sales targets through prospect qualification and consultations. Improved pipeline efficiency through strategic lead generation."
       },
       bachelors: {
-        title: "Bachelor's Degree",
+        title: "Bachelor's Degree — Information Science",
         organization: "University of South Florida",
-        description: "Earning a Bachelor of Science in Information Science with a concentration in Information Security and a minor in Entrepreneurship, graduating in December 2023."
+        description: "B.S. Information Science, Information Security concentration, Entrepreneurship minor. 3.76 GPA. Graduated December 2023. Completed entirely online."
       }
     }
   },
   contact: {
     title: "Get In Touch",
-    subtitle: "I'm currently available for freelance projects, full-time positions, and collaborative opportunities. Feel free to reach out!",
+    subtitle: "Available for Solutions Engineer, GRC Analyst, and TPM roles. Also open to technical collaboration, freelance work, and conversations about Least by Juste™.",
     info: {
       title: "Contact Information",
       location: {
         label: "Location",
-        value: "Tampa, Florida"
+        value: "Tampa, Florida (permanently based)"
       },
       responseTime: {
         label: "Response Time",
-        value: "I typically respond to all inquiries within 24-48 hours. For urgent matters, please mention \"URGENT\" in the subject line."
+        value: "I respond to all inquiries within 24-48 hours. For urgent matters, please mention URGENT in the subject line."
       },
       preferredMethods: {
         title: "Preferred Contact Methods",
         methods: [
-          "For professional inquiries: LinkedIn or Email",
-          "For code-related discussions: GitHub",
-          "For quick questions: Email"
+          "Professional inquiries: LinkedIn or Email",
+          "Code and technical discussions: GitHub",
+          "Product demos (Least by Juste™): Email"
         ]
       },
       availability: {
         title: "Meeting Availability",
-        subtitle: "Currently available for virtual meetings during these hours:",
+        subtitle: "Available for virtual meetings:",
         weekdays: {
           label: "Weekdays",
-          hours: "6:00 PM - 9:00 PM EST"
+          hours: "Flexible — reach out to schedule"
         },
         weekends: {
-          label: "Weekends", 
+          label: "Weekends",
           hours: "10:00 AM - 5:00 PM EST"
         },
-        note: "*Other times may be available upon request"
+        note: "*Currently in active job search — responsive and available"
       },
       connect: {
         title: "Connect With Me",
@@ -562,27 +488,10 @@ export default {
     form: {
       title: "Send Me a Message",
       fields: {
-        name: {
-          label: "Name",
-          placeholder: "Your name",
-          error: "Name is required"
-        },
-        email: {
-          label: "Email",
-          placeholder: "Your email",
-          error: "Email is required",
-          invalidError: "Email is invalid"
-        },
-        subject: {
-          label: "Subject",
-          placeholder: "Subject of your message",
-          error: "Subject is required"
-        },
-        message: {
-          label: "Message",
-          placeholder: "Your message",
-          error: "Message is required"
-        }
+        name: { label: "Name", placeholder: "Your name", error: "Name is required" },
+        email: { label: "Email", placeholder: "Your email", error: "Email is required", invalidError: "Email is invalid" },
+        subject: { label: "Subject", placeholder: "Subject of your message", error: "Subject is required" },
+        message: { label: "Message", placeholder: "Your message", error: "Message is required" }
       },
       submit: "Send Message",
       success: "Your message has been sent! I will get back to you soon.",
