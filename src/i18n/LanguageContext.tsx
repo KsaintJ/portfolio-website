@@ -45,8 +45,8 @@ const LanguageContext = createContext<LanguageContextType>({
   locale: 'en',
   setLocale: () => {},
   t: (key: string) => key,
-  getTranslatedArray: <T>(key: string, fallback: T[]) => fallback,
-  getTranslatedObject: <T>(key: string, fallback: T) => fallback
+  getTranslatedArray: <T,>(key: string, fallback: T[]) => fallback,
+  getTranslatedObject: <T,>(key: string, fallback: T) => fallback
 });
 
 // Helper to get a user-friendly fallback from a key
