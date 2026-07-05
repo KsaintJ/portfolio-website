@@ -183,28 +183,27 @@ const Hero = () => {
             </motion.div>
           </motion.div>
           
-          {/* Right — Profile Photo */}
+          {/* Right — decorative code visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="hidden lg:flex items-center justify-center"
+            className="hidden lg:block"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-indigo-600/30 rounded-full blur-2xl scale-110"></div>
-              <div className="relative w-72 h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl">
-                <Image
-                  src="/images/profile.png"
-                  alt="Kender Saint-Juste — Founder & Solutions Engineer"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                />
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 rounded-xl px-4 py-2 shadow-lg border border-gray-100 dark:border-gray-700">
-                <p className="text-xs font-semibold text-blue-600 dark:text-blue-400">Founder, Juste™ LLC</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">app.getleast.io</p>
+            <div className="relative w-full h-full min-h-[400px] rounded-lg overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-indigo-600/30 dark:from-blue-500/20 dark:to-indigo-600/20 rounded-lg flex items-center justify-center">
+                <div className="p-8 backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 rounded-lg border border-white/20 shadow-xl font-mono text-sm text-left">
+                  <div className="text-blue-400 mb-2">const founder = () =&gt; {'{'}</div>
+                  <div className="pl-4 text-gray-300"><span className="text-purple-400">return</span> {'{'}</div>
+                  <div className="pl-8 text-gray-300"><span className="text-green-400">company</span>: <span className="text-yellow-300">'Juste™ LLC'</span>,</div>
+                  <div className="pl-8 text-gray-300"><span className="text-green-400">product</span>: <span className="text-yellow-300">'Least by Juste™'</span>,</div>
+                  <div className="pl-8 text-gray-300"><span className="text-green-400">stack</span>: [<span className="text-yellow-300">'Next.js'</span>, <span className="text-yellow-300">'Python'</span>],</div>
+                  <div className="pl-8 text-gray-300"><span className="text-green-400">focus</span>: <span className="text-yellow-300">'IAM · GRC · AI'</span>,</div>
+                  <div className="pl-8 text-gray-300"><span className="text-green-400">location</span>: <span className="text-yellow-300">'Tampa, FL'</span></div>
+                  <div className="pl-4 text-gray-300">{'}'}</div>
+                  <div className="text-blue-400">{'}'}</div>
+                  <div className="mt-4 text-green-400 text-xs">// Currently seeking SE & GRC roles</div>
+                </div>
               </div>
             </div>
           </motion.div>

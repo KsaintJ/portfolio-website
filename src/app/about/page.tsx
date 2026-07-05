@@ -103,11 +103,11 @@ const AboutPage = () => {
                 variants={itemVariants}
               >
                 <Image
-                  src="/images/profile.jpg" 
-                  alt="Kender Saint-Juste" 
+                  src="/images/profile.png" 
+                  alt="Kender Saint-Juste — Founder & Solutions Engineer" 
                   fill
                   sizes="(max-width: 768px) 16rem, 20rem"
-                  className="object-cover"
+                  className="object-cover object-top"
                   priority
                 />
               </motion.div>
