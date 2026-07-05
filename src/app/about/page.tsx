@@ -334,39 +334,31 @@ const AboutPage = () => {
   
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                 {[
-                  { skill: "JavaScript/TypeScript", level: 82 },
-                  { skill: "React/Next.js", level: 80 },
-                  { skill: "Python", level: 78 },
-                  { skill: "Node.js/Express", level: 75 },
-                  { skill: "Google Workspace APIs / OAuth 2.0", level: 85 },
-                  { skill: "IAM / Access Governance", level: 90 },
-                  { skill: "RESTful APIs & System Design", level: 80 },
-                  { skill: "Git/GitHub", level: 85 },
-                  { skill: "SQL / MongoDB", level: 72 },
-                  { skill: "SOC 2 / NIST CSF / GRC Frameworks", level: 85 }
+                  { skill: "IAM / Access Governance", evidence: "Built Least by Juste™ — live SOC 2 access review automation", href: "https://app.getleast.io" },
+                  { skill: "Google Workspace APIs / OAuth 2.0", evidence: "Production Google Admin SDK integration in Least", href: "https://github.com/KsaintJ/iam-grc-portfolio" },
+                  { skill: "SOC 2 / NIST CSF / GRC Frameworks", evidence: "Full framework mapping portfolio", href: "https://career.usejuste.com" },
+                  { skill: "Python", evidence: "Backend of Least by Juste™ + Python Crash Course (active)", href: "https://github.com/KsaintJ" },
+                  { skill: "React / Next.js", evidence: "This portfolio + Least frontend", href: "https://github.com/KsaintJ/portfolio-website" },
+                  { skill: "Node.js / Express", evidence: "Backend News API — REST + JWT + MongoDB", href: "https://github.com/KsaintJ/assignment3-backend" },
+                  { skill: "JavaScript / TypeScript", evidence: "Frontend auth system + portfolio codebase", href: "https://github.com/KsaintJ/assignment4-frontend" },
+                  { skill: "RESTful API Design", evidence: "Auth system, news API, Least access review endpoints", href: "https://github.com/KsaintJ" },
+                  { skill: "Git / GitHub", evidence: "All active projects version-controlled and public", href: "https://github.com/KsaintJ" },
+                  { skill: "SQL / MongoDB", evidence: "Supabase (Least) + MongoDB (backend API project)", href: "https://github.com/KsaintJ" },
                 ].map((item, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="mb-2"
+                  <motion.a
+                    key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors duration-200 group"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
                   >
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">{item.skill}</span>
-                      <span className="text-gray-700 dark:text-gray-300">{item.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-                      <motion.div 
-                        className="bg-blue-600 h-2.5 rounded-full"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${item.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: index * 0.1 }}
-                      ></motion.div>
-                    </div>
-                  </motion.div>
+                    <div className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 mb-1">{item.skill}</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">{item.evidence}</div>
+                  </motion.a>
                 ))}
               </div>
   

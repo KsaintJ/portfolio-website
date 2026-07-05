@@ -364,21 +364,21 @@ export default {
       frontend: "GRC Analyst Resume"
     },
     internship: {
-      title: "Open to Opportunities",
-      description: "I'm actively pursuing Solutions Engineer, GRC Analyst, Information Security Analyst, and Implementation Lead roles. I bring live product experience (Least by Juste™), 12+ years of professional background, and genuine technical depth in IAM, access governance, and full-stack development.",
+      title: "Currently Seeking",
+      description: "I'm a founder with a live product and 12+ years of professional experience — actively pursuing my next role while continuing to build Juste™ LLC. I bring real technical depth, not just credentials.",
       availability: {
-        title: "Availability",
-        fullTime: "Immediately available — full-time",
-        partTime: "Open to contract-to-hire",
-        location: "Tampa, FL (permanently based) — open to remote"
+        title: "Active Now",
+        fullTime: "Solutions Engineer / Pre-Sales Engineer",
+        partTime: "GRC Analyst / Information Security Analyst",
+        location: "Implementation Lead / Technical Account Manager"
       },
       interests: {
-        title: "Target Roles",
-        frontend: "Solutions Engineer / Pre-Sales Engineer",
-        fullstack: "GRC Analyst / Information Security Analyst",
-        webApp: "Implementation Lead / Technical Account Manager"
+        title: "Building Toward",
+        frontend: "Technical Program Manager (2-3 years, post-master's)",
+        fullstack: "AI Governance Engineer — USF MSAI Fall 2027",
+        webApp: "Founder / CEO — Juste™ LLC full-time"
       },
-      cta: "Contact Me"
+      cta: "Let's Talk"
     },
     traits: {
       title: "Personal Traits",
