@@ -16,34 +16,34 @@ const inter = Inter({ subsets: ['latin'] });
 // Base metadata for your entire site
 export const metadata: Metadata = {
   title: {
-    default: 'Kender Saint-Juste | Software Developer',
+    default: 'Kender Saint-Juste | Founder & Solutions Engineer',
     template: '%s | Kender Saint-Juste'
   },
-  description: 'Junior Software Developer specializing in MERN and MEAN stack development. Penn State graduate with expertise in React, Node.js, and full-stack development.',
-  keywords: ['Software Developer', 'MERN Stack', 'MEAN Stack', 'React Developer', 'Node.js', 'Frontend Developer', 'Full-stack Developer', 'JavaScript', 'TypeScript'],
+  description: 'Founder & CEO of Juste™ LLC. Builder of Least by Juste™ — access review automation SaaS for Google Workspace. Solutions Engineer candidate with 12+ years of professional experience in IAM, GRC, and full-stack development.',
+  keywords: ['Solutions Engineer', 'GRC Analyst', 'IAM', 'Access Governance', 'Founder', 'Juste LLC', 'Least by Juste', 'Full-Stack Developer', 'React', 'Next.js', 'Python', 'TypeScript', 'SOC 2', 'Tampa Florida'],
   authors: [{ name: 'Kender Saint-Juste' }],
   creator: 'Kender Saint-Juste',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://kendersaintjuste.com',
-    title: 'Kender Saint-Juste | Software Developer',
-    description: 'Junior Software Developer specializing in MERN and MEAN stack development',
+    url: 'https://portfolio.usejuste.com',
+    title: 'Kender Saint-Juste | Founder & Solutions Engineer',
+    description: 'Founder of Juste™ LLC. Builder of Least by Juste™ — live access review automation SaaS. Solutions Engineer with 12+ years experience in IAM, GRC, and full-stack development.',
     siteName: 'Kender Saint-Juste Portfolio',
     images: [
       {
-        url: 'https://kendersaintjuste.com/images/og-image.jpg',
+        url: 'https://portfolio.usejuste.com/images/profile.jpg',
         width: 1200,
         height: 630,
-        alt: 'Kender Saint-Juste - Software Developer',
+        alt: 'Kender Saint-Juste — Founder & Solutions Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kender Saint-Juste | Software Developer',
-    description: 'Junior Software Developer specializing in MERN and MEAN stack development',
-    images: ['https://kendersaintjuste.com/images/og-image.jpg'],
+    title: 'Kender Saint-Juste | Founder & Solutions Engineer',
+    description: 'Founder of Juste™ LLC. Builder of Least by Juste™. Solutions Engineer with IAM/GRC expertise.',
+    images: ['https://portfolio.usejuste.com/images/profile.jpg'],
   },
   robots: {
     index: true,

@@ -17,30 +17,30 @@ import { useLanguage } from '@/i18n';
 // Sample projects data - replace with your actual projects
 const featuredProjects = [
   {
+    title: "Least by Juste™ — Access Review Automation",
+    description: "Live SaaS product I founded and built. Automates Google Workspace access reviews and generates SOC 2 CC6.x-aligned audit evidence for SMBs. Built with Next.js, Python, FastAPI, Supabase, and Google Admin SDK.",
+    image: "/images/projects/elderly-care-management/thumbnail.jpg",
+    tags: ["Next.js", "Python", "FastAPI", "Supabase", "Google Admin SDK", "SOC 2"],
+    link: "/projects/elderly-care-management",
+    github: "https://github.com/KsaintJ/iam-grc-portfolio",
+    demo: "https://app.getleast.io"
+  },
+  {
     title: "Frontend Authentication System",
-    description: "A comprehensive authentication system with OAuth integration, form validation, and error handling built with React and Redux Toolkit.",
+    description: "Secure authentication system with OAuth integration, JWT token management, role-based access control, and comprehensive error handling. Built with React and Redux Toolkit.",
     image: "/images/projects/frontend-assignment/thumbnail.jpg",
-    tags: ["React", "Redux", "Tailwind CSS", "Vitest"],
+    tags: ["React", "Redux", "Tailwind CSS", "JWT", "OAuth"],
     link: "/projects/frontend-assignment",
     github: "https://github.com/KsaintJ/assignment4-frontend",
     demo: "https://frontend-auth-demo.vercel.app"
   },
   {
-    title: "Backend News API",
-    description: "A RESTful API for news articles with authentication, authorization, and CRUD operations built with Node.js, Express, and MongoDB.",
+    title: "Backend News API Service",
+    description: "RESTful API with full CRUD operations, JWT authentication, role-based access control, pagination, filtering, and MongoDB. Built with Node.js and Express.",
     image: "/images/projects/backend-assignment/thumbnail.jpg",
-    tags: ["Node.js", "Express", "MongoDB", "JWT"],
+    tags: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
     link: "/projects/backend-assignment",
     github: "https://github.com/KsaintJ/assignment3-backend"
-  },
-  {
-    title: "Elderly Care Management System",
-    description: "A full-stack application for managing elderly care services, including patient records, medication tracking, and appointment scheduling.",
-    image: "/images/projects/elderly-care-management/thumbnail.jpg",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
-    link: "/projects/elderly-care-management",
-    github: "https://github.com/KsaintJ/elderly-care-management",
-    demo: "https://www.youtube.com/watch?v=1-amkgJm36M"
   },
 ];
 

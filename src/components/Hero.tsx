@@ -4,6 +4,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/i18n';
 
 const Hero = () => {
@@ -65,7 +66,7 @@ const Hero = () => {
         </a>
         
         <a 
-         href="/resumes/Resume_Junior_Dev.pdf" 
+         href="/resumes/KSJ_SE_Resume.pdf" 
          target="_blank" 
          rel="noopener noreferrer" 
          className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110"
@@ -83,17 +84,17 @@ const Hero = () => {
         
         <div className="absolute inset-0 opacity-5 dark:opacity-10">
           <pre className="text-xs sm:text-sm text-gray-800 dark:text-gray-200 overflow-hidden h-full">
-            {`function developer() {
-  const skills = ['JavaScript', 'React', 'Next.js', 'Node.js'];
-  const passion = 'Building beautiful web experiences';
+            {`function founder() {
+  const products = ['Least by Juste™', 'OneCare by Juste™'];
+  const mission = 'Building AI-powered access governance tools';
   
   return {
     name: 'Kender Saint-Juste',
-    title: 'Software Developer',
+    title: 'Founder & Solutions Engineer',
     location: 'Tampa, Florida',
-    education: 'Penn State University',
-    focus: 'Frontend & Full-Stack Development',
-    connect: () => 'Always open to new opportunities'
+    company: 'Juste™ LLC',
+    focus: 'IAM · GRC · Full-Stack · AI',
+    connect: () => 'Open to SE and technical leadership roles'
   };
 }`}
           </pre>
@@ -110,7 +111,7 @@ const Hero = () => {
             className="text-left"
           >
             <motion.div variants={itemVariants} className="inline-block px-4 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium mb-6">
-              Software Developer
+              Founder · Solutions Engineer · Builder
             </motion.div>
             
             <motion.h1 
@@ -171,7 +172,7 @@ const Hero = () => {
               </a>
               
               <a 
-                href="/resumes/Resume_Junior_Dev.pdf" 
+                href="/resumes/KSJ_SE_Resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
@@ -182,23 +183,28 @@ const Hero = () => {
             </motion.div>
           </motion.div>
           
-          {/* Right image/decorative column */}
+          {/* Right — Profile Photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="hidden lg:block"
+            className="hidden lg:flex items-center justify-center"
           >
-            <div className="relative w-full h-full min-h-[400px] rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-indigo-600/30 dark:from-blue-500/20 dark:to-indigo-600/20 rounded-lg flex items-center justify-center">
-                <div className="p-6 backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 rounded-lg border border-white/20 shadow-xl">
-                  <div className="space-y-4">
-                    <div className="h-3 w-16 bg-blue-200 dark:bg-blue-700 rounded-full"></div>
-                    <div className="h-3 w-24 bg-blue-300 dark:bg-blue-600 rounded-full"></div>
-                    <div className="h-3 w-20 bg-indigo-300 dark:bg-indigo-600 rounded-full"></div>
-                    <div className="h-3 w-28 bg-indigo-200 dark:bg-indigo-700 rounded-full"></div>
-                  </div>
-                </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-indigo-600/30 rounded-full blur-2xl scale-110"></div>
+              <div className="relative w-72 h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl">
+                <Image
+                  src="/images/profile.png"
+                  alt="Kender Saint-Juste — Founder & Solutions Engineer"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 rounded-xl px-4 py-2 shadow-lg border border-gray-100 dark:border-gray-700">
+                <p className="text-xs font-semibold text-blue-600 dark:text-blue-400">Founder, Juste™ LLC</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">app.getleast.io</p>
               </div>
             </div>
           </motion.div>
