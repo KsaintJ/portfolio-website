@@ -1,8 +1,46 @@
 @import "tailwindcss";
 
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --brand: #2d59fc;
+  --brand-dark: #1a3ee0;
+  --gold: #f59e0b;
+  --gold-dark: #d97706;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --surface: #1e293b;
+    --border: #334155;
+  }
+}
+
 @layer base {
+  * {
+    @apply border-border;
+  }
   body {
-    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+    background: var(--background);
+    color: var(--foreground);
+    @apply antialiased;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Selection color */
+  ::selection {
+    background: rgba(45, 89, 252, 0.2);
+    color: #2d59fc;
   }
 }
 
@@ -10,31 +48,48 @@
   .container {
     @apply px-4 mx-auto max-w-7xl;
   }
-}
-
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Brand button */
+  .btn-brand {
+    @apply inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white
+           bg-brand-500 hover:bg-brand-600
+           shadow-brand transition-all duration-200
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+  /* Gold accent button */
+  .btn-gold {
+    @apply inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white
+           bg-gold-500 hover:bg-gold-600
+           shadow-gold transition-all duration-200
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+  /* Ghost button */
+  .btn-ghost {
+    @apply inline-flex items-center px-6 py-3 rounded-lg font-semibold
+           border-2 border-brand-500 text-brand-500
+           hover:bg-brand-50 dark:hover:bg-brand-900/20
+           transition-all duration-200
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+  /* Glass card */
+  .card-glass {
+    @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-md
+           border border-white/20 dark:border-slate-700/50
+           rounded-xl shadow-glass;
+  }
+  /* Section label */
+  .section-label {
+    @apply inline-block text-xs font-bold tracking-widest uppercase
+           text-brand-500 dark:text-brand-400 mb-3;
+  }
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-500 to-gold-500
+           bg-clip-text text-transparent;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

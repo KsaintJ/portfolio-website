@@ -341,7 +341,7 @@ export default {
     button: "Get In Touch"
   },
   footer: {
-    description: "Founder & CEO of Juste™ LLC. Builder of Least by Juste™ — access review automation for Google Workspace. Solutions Engineer and full-stack developer.",
+    description: "Founder & CEO of Juste™ LLC. Builder of Least by Juste™ — access review automation for Google Workspace. Pursuing Solutions Engineer and GRC Analyst roles.",
     rights: "All rights reserved",
     madeWith: "Made with",
     usingTech: "using Next.js, React, and Tailwind CSS",
@@ -374,8 +374,8 @@ export default {
       },
       interests: {
         title: "Building Toward",
-        frontend: "Technical Program Manager (2-3 years, post-master's)",
-        fullstack: "AI Governance Engineer — USF MSAI Fall 2027",
+        frontend: "Full-Stack Developer / Founding Engineer",
+        fullstack: "Product Manager / Technical Product Owner",
         webApp: "Founder / CEO — Juste™ LLC full-time"
       },
       cta: "Let's Talk"
