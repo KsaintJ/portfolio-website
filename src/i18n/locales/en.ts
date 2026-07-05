@@ -337,7 +337,7 @@ export default {
   },
   cta: {
     title: "Let's Build Something Together",
-    description: "I'm actively pursuing Solutions Engineer, Technical Program Manager, and full-stack development roles in Tampa, FL. As the founder of Juste™ LLC and builder of Least by Juste™, I bring 12+ years of professional experience, live product credibility, and technical depth across IAM, SaaS, and software engineering.",
+    description: "I'm actively pursuing Solutions Engineer, GRC Analyst, and Information Security Analyst roles in Tampa, FL. As the founder of Juste™ LLC and builder of Least by Juste™, I bring 12+ years of professional experience, live product credibility, and technical depth across IAM, access governance, and full-stack engineering.",
     button: "Get In Touch"
   },
   footer: {
@@ -365,7 +365,7 @@ export default {
     },
     internship: {
       title: "Open to Opportunities",
-      description: "I'm actively pursuing Solutions Engineer, Technical Program Manager, GRC Analyst, and full-stack development roles. I bring live product experience, 12+ years of professional background, and genuine technical depth — not just credentials.",
+      description: "I'm actively pursuing Solutions Engineer, GRC Analyst, Information Security Analyst, and Implementation Lead roles. I bring live product experience (Least by Juste™), 12+ years of professional background, and genuine technical depth in IAM, access governance, and full-stack development.",
       availability: {
         title: "Availability",
         fullTime: "Immediately available — full-time",
@@ -375,8 +375,8 @@ export default {
       interests: {
         title: "Target Roles",
         frontend: "Solutions Engineer / Pre-Sales Engineer",
-        fullstack: "Technical Program Manager",
-        webApp: "GRC Analyst / Information Security Analyst"
+        fullstack: "GRC Analyst / Information Security Analyst",
+        webApp: "Implementation Lead / Technical Account Manager"
       },
       cta: "Contact Me"
     },
