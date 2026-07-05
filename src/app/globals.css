@@ -1,14 +1,40 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-50: #eef3ff;
+  --color-brand-100: #dce7ff;
+  --color-brand-200: #b9cfff;
+  --color-brand-300: #8aadff;
+  --color-brand-400: #5580ff;
+  --color-brand-500: #2d59fc;
+  --color-brand-600: #1a3ee0;
+  --color-brand-700: #162fba;
+  --color-brand-800: #172a96;
+  --color-brand-900: #172876;
+
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+
+  --shadow-brand: 0 4px 24px -2px rgba(45, 89, 252, 0.25);
+  --shadow-gold: 0 4px 24px -2px rgba(245, 158, 11, 0.25);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --brand: #2d59fc;
-  --brand-dark: #1a3ee0;
-  --gold: #f59e0b;
-  --gold-dark: #d97706;
   --surface: #f8fafc;
   --border: #e2e8f0;
+  --brand: #2d59fc;
+  --gold: #f59e0b;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,69 +53,17 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    @apply antialiased;
     font-family: Inter, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4 {
-    @apply tracking-tight;
+    letter-spacing: -0.025em;
   }
-  /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
   }
-  /* Selection color */
   ::selection {
     background: rgba(45, 89, 252, 0.2);
     color: #2d59fc;
-  }
-}
-
-@layer components {
-  .container {
-    @apply px-4 mx-auto max-w-7xl;
-  }
-  /* Brand button */
-  .btn-brand {
-    @apply inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white
-           bg-brand-500 hover:bg-brand-600
-           shadow-brand transition-all duration-200
-           hover:-translate-y-0.5 active:translate-y-0;
-  }
-  /* Gold accent button */
-  .btn-gold {
-    @apply inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white
-           bg-gold-500 hover:bg-gold-600
-           shadow-gold transition-all duration-200
-           hover:-translate-y-0.5 active:translate-y-0;
-  }
-  /* Ghost button */
-  .btn-ghost {
-    @apply inline-flex items-center px-6 py-3 rounded-lg font-semibold
-           border-2 border-brand-500 text-brand-500
-           hover:bg-brand-50 dark:hover:bg-brand-900/20
-           transition-all duration-200
-           hover:-translate-y-0.5 active:translate-y-0;
-  }
-  /* Glass card */
-  .card-glass {
-    @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-md
-           border border-white/20 dark:border-slate-700/50
-           rounded-xl shadow-glass;
-  }
-  /* Section label */
-  .section-label {
-    @apply inline-block text-xs font-bold tracking-widest uppercase
-           text-brand-500 dark:text-brand-400 mb-3;
-  }
-  /* Gradient text */
-  .text-gradient {
-    @apply bg-gradient-to-r from-brand-500 to-gold-500
-           bg-clip-text text-transparent;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
   }
 }

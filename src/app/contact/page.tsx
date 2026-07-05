@@ -74,7 +74,7 @@ export default function ContactPage() {
           <SafeMotion>
             <motion.div className="text-center mb-14"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <span className="section-label">Get In Touch</span>
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400 mb-3">Get In Touch</span>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 {t('contact.title')}
               </h1>

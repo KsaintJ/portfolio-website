@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Link href="/" className="inline-flex items-center gap-2 mb-4">
               <span className="text-2xl font-bold tracking-tight">
-                KSJ<span className="text-brand-400">.</span>
+                KSJ<span className="text-blue-400">.</span>
               </span>
               <span className="text-xs text-slate-400 font-mono uppercase tracking-widest">Portfolio</span>
             </Link>
@@ -80,14 +80,14 @@ const Footer = () => {
               ].map((item) => (
                 <li key={item.name}>
                   <a href={item.href} target="_blank" rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-brand-400 text-sm transition-colors flex items-center gap-1">
+                    className="text-slate-400 hover:text-blue-400 text-sm transition-colors flex items-center gap-1">
                     {item.name} <FaExternalLinkAlt className="w-2.5 h-2.5" />
                   </a>
                 </li>
               ))}
             </ul>
             <a href="mailto:ksaintjuste7@gmail.com"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium transition-colors">
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors">
               {t('footer.getInTouch')}
             </a>
           </div>
