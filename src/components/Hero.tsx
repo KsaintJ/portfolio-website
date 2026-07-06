@@ -84,19 +84,20 @@ const Hero = () => {
         
         <div className="absolute inset-0 opacity-5 dark:opacity-10">
           <pre className="text-xs sm:text-sm text-gray-800 dark:text-gray-200 overflow-hidden h-full">
-            {`function founder() {
-  const products = ['Least by Juste™', 'OneCare by Juste™'];
-  const mission = 'Building AI-powered access governance tools';
-  
-  return {
-    name: 'Kender Saint-Juste',
-    title: 'Founder & Solutions Engineer',
-    location: 'Tampa, Florida',
-    company: 'Juste™ LLC',
-    focus: 'IAM · GRC · Full-Stack · AI',
-    connect: () => 'Open to SE and technical leadership roles'
-  };
-}`}
+            {`# Least by Juste™ — Access Review Automation
+# FastAPI · Supabase · Google Admin SDK · Claude AI
+
+from fastapi import APIRouter, Query
+from risk_engine import run_risk_engine
+from ai_explain import explain_findings_batch
+
+RULES = ["RULE-001","RULE-002","RULE-003",
+         "RULE-004","RULE-005","RULE-006",
+         "RULE-007","RULE-008","RULE-009"]
+
+# 4 HIGH severity · 5 MEDIUM severity
+# Deterministic. No ML. Pure Python.
+# SOC 2 CC6.1 · CC6.3 · CC6.6 · CC6.7`}
           </pre>
         </div>
       </div>
@@ -192,17 +193,30 @@ const Hero = () => {
           >
             <div className="relative w-full h-full min-h-[400px] rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-indigo-600/30 dark:from-blue-500/20 dark:to-indigo-600/20 rounded-lg flex items-center justify-center">
-                <div className="p-8 backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 rounded-lg border border-white/20 shadow-xl font-mono text-sm text-left">
-                  <div className="text-blue-400 mb-2">const founder = () =&gt; {'{'}</div>
-                  <div className="pl-4 text-gray-300"><span className="text-purple-400">return</span> {'{'}</div>
-                  <div className="pl-8 text-gray-300"><span className="text-green-400">company</span>: <span className="text-yellow-300">'Juste™ LLC'</span>,</div>
-                  <div className="pl-8 text-gray-300"><span className="text-green-400">product</span>: <span className="text-yellow-300">'Least by Juste™'</span>,</div>
-                  <div className="pl-8 text-gray-300"><span className="text-green-400">stack</span>: [<span className="text-yellow-300">'Next.js'</span>, <span className="text-yellow-300">'Python'</span>],</div>
-                  <div className="pl-8 text-gray-300"><span className="text-green-400">focus</span>: <span className="text-yellow-300">'IAM · GRC · AI'</span>,</div>
-                  <div className="pl-8 text-gray-300"><span className="text-green-400">location</span>: <span className="text-yellow-300">'Tampa, FL'</span></div>
-                  <div className="pl-4 text-gray-300">{'}'}</div>
-                  <div className="text-blue-400">{'}'}</div>
-                  <div className="mt-4 text-green-400 text-xs">// Currently seeking SE & GRC roles</div>
+                <div className="p-6 backdrop-blur-sm bg-white/10 dark:bg-gray-900/50 rounded-lg border border-white/20 shadow-xl font-mono text-xs text-left w-full">
+                  {/* File header */}
+                  <div className="text-green-400 mb-3 text-xs"># api/routers/risk.py — Least by Juste™</div>
+                  {/* Decorator */}
+                  <div className="text-yellow-300">@router.<span className="text-blue-300">post</span>(<span className="text-orange-300">&quot;/scan&quot;</span>)</div>
+                  {/* Function signature */}
+                  <div><span className="text-purple-400">async def</span> <span className="text-blue-300">run_risk_scan</span>(<span className="text-gray-300">user_id: str</span>):</div>
+                  {/* Supabase query */}
+                  <div className="pl-4 text-gray-300 mt-1">data = supabase.<span className="text-blue-300">table</span>(<span className="text-orange-300">&quot;directory_data&quot;</span>)</div>
+                  <div className="pl-8 text-gray-400">.<span className="text-blue-300">select</span>(<span className="text-orange-300">&quot;*&quot;</span>).<span className="text-blue-300">execute</span>()</div>
+                  {/* Partition by type */}
+                  <div className="pl-4 text-gray-300 mt-1">users  = [d <span className="text-purple-400">for</span> d <span className="text-purple-400">in</span> data</div>
+                  <div className="pl-10 text-gray-300"><span className="text-purple-400">if</span> d[<span className="text-orange-300">&quot;data_type&quot;</span>] == <span className="text-orange-300">&quot;user&quot;</span>]</div>
+                  <div className="pl-4 text-gray-300">groups = [d <span className="text-purple-400">for</span> d <span className="text-purple-400">in</span> data</div>
+                  <div className="pl-10 text-gray-300"><span className="text-purple-400">if</span> d[<span className="text-orange-300">&quot;data_type&quot;</span>] == <span className="text-orange-300">&quot;group&quot;</span>]</div>
+                  {/* Risk engine call */}
+                  <div className="pl-4 text-gray-300 mt-1">findings = <span className="text-blue-300">run_risk_engine</span>(</div>
+                  <div className="pl-8 text-gray-300">users, groups, roles)</div>
+                  {/* AI enrichment + return */}
+                  <div className="pl-4 text-purple-400 mt-1"><span className="text-purple-400">return</span> <span className="text-blue-300 text-purple-400">explain_findings_batch</span><span className="text-gray-300">(findings)</span></div>
+                  {/* Footer */}
+                  <div className="mt-3 text-green-400 text-xs border-t border-white/10 pt-2">
+                    # 9-rule engine · FastAPI · Supabase · Claude AI
+                  </div>
                 </div>
               </div>
             </div>

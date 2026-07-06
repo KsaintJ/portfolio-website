@@ -18,6 +18,18 @@ export default function ProjectsPage() {
   // Project data with image paths
   const projects = [
     {
+      id: 'least-by-juste',
+      title: 'Least by Juste™',
+      description: 'IAM SaaS — access review autopilot for Google Workspace. 9-rule deterministic risk engine, AI-generated explanations via Claude, automated daily scans, and PDF audit reports. Live product.',
+      image: '/images/projects/least-by-juste/thumbnail.png',
+      tags: ['Python', 'FastAPI', 'Next.js', 'Supabase', 'Google OAuth', 'Claude AI'],
+      githubUrl: 'https://github.com/KsaintJ',
+      liveUrl: 'https://app.getleast.io',
+      category: 'full-stack',
+      featured: true,
+      detailsUrl: '/projects/least-by-juste'
+    },
+    {
       id: 'elderly-care-management',
       title: 'Elderly Care Management System',
       description: 'A comprehensive web application for managing elderly care facilities, tracking patient information, and coordinating staff schedules.',
