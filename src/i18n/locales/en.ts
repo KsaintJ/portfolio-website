@@ -403,17 +403,17 @@ export default {
       },
       tech: {
         title: "Technology & Building",
-        description: "I build things. Least by Juste™ is live. OneCare is in development. I'm learning to code without AI dependency — I want to explain every line I write. The goal is genuine technical fluency, not credential collection."
+        description: "I build things. Least by Juste™ is live. OneCare is in development. The goal is genuine technical fluency and building products that solve real problems — not credential collection."
       },
       travel: {
-        title: "Travel & Family",
-        description: "Originally from Haiti and Port St. Lucie, FL — now permanently in Tampa with my wife Mariah and two sons. Travel shaped how I think about building for diverse users and why I built multilingual support into this very portfolio."
+        title: "Travel & Culture",
+        description: "Originally from Haiti and Port St. Lucie, FL — now permanently based in Tampa. Travel shaped how I think about building for diverse users and why I built multilingual support into this very portfolio."
       }
     },
     goals: {
       title: "Professional Goals",
-      shortTerm: "Land a Solutions Engineer or GRC Analyst role that leverages my IAM domain expertise, technical aptitude, and live product experience at Juste™ LLC.",
-      midTerm: "Complete a master's degree in Computer Science or AI (USF MSAI, target Fall 2027) while growing Least by Juste™ to paying customers and building technical fluency in Python and full-stack engineering.",
+      shortTerm: "Land a Solutions Engineer or GRC Analyst role where I can apply IAM domain expertise, technical depth, and live product experience — and keep building Juste™ LLC in parallel.",
+      midTerm: "Grow Least by Juste™ to its first paying customers, pursue a graduate degree in Computer Science or AI, and deepen full-stack engineering capability through real product work.",
       longTerm: "Build Juste™ LLC into a company that solves real problems in access governance and elderly care AI — carrying the Saint-Juste name forward through what I build, not just what I say."
     },
     timeline: {
@@ -446,7 +446,7 @@ export default {
   },
   contact: {
     title: "Get In Touch",
-    subtitle: "Available for Solutions Engineer, GRC Analyst, and TPM roles. Also open to technical collaboration, freelance work, and conversations about Least by Juste™.",
+    subtitle: "Open to Solutions Engineer, GRC Analyst, and Implementation Lead roles in Tampa or remote. Also open to technical collaboration and conversations about Least by Juste™.",
     info: {
       title: "Contact Information",
       location: {
