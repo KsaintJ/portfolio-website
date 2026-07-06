@@ -437,6 +437,11 @@ export default {
         organization: "TeamViewer",
         description: "Exceeded quarterly sales targets through prospect qualification and consultations. Improved pipeline efficiency through strategic lead generation."
       },
+      bestBuy: {
+        title: "Sales Consultant & Team Trainer",
+        organization: "Best Buy",
+        description: "Top-performing consultant generating $40K+ in monthly personal sales. Trained 10+ new consultants on product knowledge and consultative sales techniques across consumer electronics and enterprise technology solutions."
+      },
       bachelors: {
         title: "Bachelor's Degree — Information Science",
         organization: "University of South Florida",

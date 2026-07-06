@@ -61,6 +61,12 @@ const AboutPage = () => {
       description: t('about.timeline.salesDev.description')
     },
     {
+      year: '2014 - 2021',
+      title: t('about.timeline.bestBuy.title'),
+      organization: t('about.timeline.bestBuy.organization'),
+      description: t('about.timeline.bestBuy.description')
+    },
+    {
       year: '2019 - 2023',
       title: t('about.timeline.bachelors.title'),
       organization: t('about.timeline.bachelors.organization'),

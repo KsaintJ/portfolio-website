@@ -157,7 +157,8 @@ export default function Home() {
       <SectionDivider color="from-white to-blue-600/10" bgColor="fill-blue-600" />
       
       {/* Ready to Work Together Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white relative">
+      <section className="py-20 text-white relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #1a2744 0%, #2d59fc 60%, #1a3ee0 100%)' }}>
         <div className="absolute inset-0 bg-blue-600 opacity-20" style={{ 
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`,
           backgroundSize: '20px 20px'

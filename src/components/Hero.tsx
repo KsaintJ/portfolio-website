@@ -111,7 +111,8 @@ RULES = ["RULE-001","RULE-002","RULE-003",
             animate="visible"
             className="text-left"
           >
-            <motion.div variants={itemVariants} className="inline-block px-4 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium mb-6">
+            <motion.div variants={itemVariants} className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6"
+              style={{ background: 'rgba(45,89,252,0.12)', color: '#2d59fc', border: '1px solid rgba(45,89,252,0.25)' }}>
               Founder · Solutions Engineer · Builder
             </motion.div>
             
@@ -140,11 +141,15 @@ RULES = ["RULE-001","RULE-002","RULE-003",
               className="flex flex-wrap gap-4 mb-8"
               variants={itemVariants}
             >
-              <Link href="/projects" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 hover:translate-y-[-2px] shadow-md">
+              <Link href="/projects"
+                className="px-6 py-3 text-white font-semibold rounded-lg transition duration-300 hover:-translate-y-0.5 shadow-lg"
+                style={{ background: 'linear-gradient(135deg, #2d59fc 0%, #1a3ee0 100%)', boxShadow: '0 4px 20px rgba(45,89,252,0.4)' }}>
                 {t('hero.cta.work')}
               </Link>
               
-              <Link href="/contact" className="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600/10 font-medium rounded-lg transition duration-300 hover:translate-y-[-2px]">
+              <Link href="/contact"
+                className="px-6 py-3 font-semibold rounded-lg transition duration-300 hover:-translate-y-0.5"
+                style={{ border: '2px solid #2d59fc', color: '#2d59fc' }}>
                 {t('hero.cta.contact')}
               </Link>
             </motion.div>
@@ -184,39 +189,59 @@ RULES = ["RULE-001","RULE-002","RULE-003",
             </motion.div>
           </motion.div>
           
-          {/* Right — decorative code visual */}
+          {/* Right — Least by Juste™ product preview */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
             className="hidden lg:block"
           >
-            <div className="relative w-full h-full min-h-[400px] rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-indigo-600/30 dark:from-blue-500/20 dark:to-indigo-600/20 rounded-lg flex items-center justify-center">
-                <div className="p-6 backdrop-blur-sm bg-white/10 dark:bg-gray-900/50 rounded-lg border border-white/20 shadow-xl font-mono text-xs text-left w-full">
-                  {/* File header */}
-                  <div className="text-green-400 mb-3 text-xs"># api/routers/risk.py — Least by Juste™</div>
-                  {/* Decorator */}
-                  <div className="text-yellow-300">@router.<span className="text-blue-300">post</span>(<span className="text-orange-300">&quot;/scan&quot;</span>)</div>
-                  {/* Function signature */}
-                  <div><span className="text-purple-400">async def</span> <span className="text-blue-300">run_risk_scan</span>(<span className="text-gray-300">user_id: str</span>):</div>
-                  {/* Supabase query */}
-                  <div className="pl-4 text-gray-300 mt-1">data = supabase.<span className="text-blue-300">table</span>(<span className="text-orange-300">&quot;directory_data&quot;</span>)</div>
-                  <div className="pl-8 text-gray-400">.<span className="text-blue-300">select</span>(<span className="text-orange-300">&quot;*&quot;</span>).<span className="text-blue-300">execute</span>()</div>
-                  {/* Partition by type */}
-                  <div className="pl-4 text-gray-300 mt-1">users  = [d <span className="text-purple-400">for</span> d <span className="text-purple-400">in</span> data</div>
-                  <div className="pl-10 text-gray-300"><span className="text-purple-400">if</span> d[<span className="text-orange-300">&quot;data_type&quot;</span>] == <span className="text-orange-300">&quot;user&quot;</span>]</div>
-                  <div className="pl-4 text-gray-300">groups = [d <span className="text-purple-400">for</span> d <span className="text-purple-400">in</span> data</div>
-                  <div className="pl-10 text-gray-300"><span className="text-purple-400">if</span> d[<span className="text-orange-300">&quot;data_type&quot;</span>] == <span className="text-orange-300">&quot;group&quot;</span>]</div>
-                  {/* Risk engine call */}
-                  <div className="pl-4 text-gray-300 mt-1">findings = <span className="text-blue-300">run_risk_engine</span>(</div>
-                  <div className="pl-8 text-gray-300">users, groups, roles)</div>
-                  {/* AI enrichment + return */}
-                  <div className="pl-4 text-purple-400 mt-1"><span className="text-purple-400">return</span> <span className="text-blue-300 text-purple-400">explain_findings_batch</span><span className="text-gray-300">(findings)</span></div>
-                  {/* Footer */}
-                  <div className="mt-3 text-green-400 text-xs border-t border-white/10 pt-2">
-                    # 9-rule engine · FastAPI · Supabase · Claude AI
+            <div className="relative">
+              {/* Glow behind the card */}
+              <div className="absolute -inset-1 rounded-2xl blur-xl opacity-30"
+                style={{ background: 'linear-gradient(135deg, #2d59fc, #1a3ee0)' }} />
+              {/* Product card */}
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+                style={{ background: '#0f172a' }}>
+                {/* Fake browser chrome */}
+                <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/10"
+                  style={{ background: '#1e293b' }}>
+                  <div className="w-3 h-3 rounded-full bg-red-500/70" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/70" />
+                  <div className="ml-4 flex-1 rounded px-3 py-1 text-xs text-slate-400"
+                    style={{ background: '#0f172a', fontFamily: 'monospace' }}>
+                    app.getleast.io
                   </div>
+                </div>
+                {/* Dashboard screenshot */}
+                <div className="relative">
+                  <Image
+                    src="/images/projects/least-by-juste/thumbnail.png"
+                    alt="Least by Juste™ — Access Review Dashboard"
+                    width={600}
+                    height={375}
+                    className="w-full object-cover"
+                    priority
+                  />
+                  {/* Live badge overlay */}
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold"
+                    style={{ background: 'rgba(45,89,252,0.9)', color: 'white' }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                    Live Product
+                  </div>
+                </div>
+                {/* Product label below */}
+                <div className="px-4 py-3 flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-semibold text-white">Least by Juste™</p>
+                    <p className="text-xs text-slate-400">Access Review Automation · SOC 2 CC6.x</p>
+                  </div>
+                  <a href="https://app.getleast.io" target="_blank" rel="noopener noreferrer"
+                    className="text-xs font-medium px-3 py-1.5 rounded-lg transition-colors"
+                    style={{ background: 'rgba(45,89,252,0.2)', color: '#7ba3ff', border: '1px solid rgba(45,89,252,0.3)' }}>
+                    Try it →
+                  </a>
                 </div>
               </div>
             </div>

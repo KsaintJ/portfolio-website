@@ -86,6 +86,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} h-full bg-white dark:bg-gray-900`}>
         <ThemeProvider
+          attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
