@@ -19,11 +19,20 @@ const featuredProjects = [
   {
     title: "Least by Juste™ — Access Review Automation",
     description: "Live SaaS product I founded and built. Automates Google Workspace access reviews and generates SOC 2 CC6.x-aligned audit evidence for SMBs. Built with Next.js, Python, FastAPI, Supabase, and Google Admin SDK.",
-    image: "/images/projects/elderly-care-management/thumbnail.jpg",
+    image: "/images/projects/least-by-juste/thumbnail.png",
     tags: ["Next.js", "Python", "FastAPI", "Supabase", "Google Admin SDK", "SOC 2"],
-    link: "/projects/elderly-care-management",
+    link: "/projects/least-by-juste",
     github: "https://github.com/KsaintJ/iam-grc-portfolio",
     demo: "https://app.getleast.io"
+  },
+  {
+    title: "Portfolio Website — portfolio.usejuste.com",
+    description: "This portfolio site — built with Next.js, React, and Tailwind CSS. Features multilingual support (English, French, Haitian Creole, Spanish), dark/light mode, Framer Motion animations, and full i18n architecture.",
+    image: "/images/projects/portfolio-website/thumbnail.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "i18n", "Vercel"],
+    link: "/projects/portfolio-website",
+    github: "https://github.com/KsaintJ/portfolio-website",
+    demo: "https://portfolio.usejuste.com"
   },
   {
     title: "Frontend Authentication System",
@@ -33,14 +42,6 @@ const featuredProjects = [
     link: "/projects/frontend-assignment",
     github: "https://github.com/KsaintJ/assignment4-frontend",
     demo: "https://frontend-auth-demo.vercel.app"
-  },
-  {
-    title: "Backend News API Service",
-    description: "RESTful API with full CRUD operations, JWT authentication, role-based access control, pagination, filtering, and MongoDB. Built with Node.js and Express.",
-    image: "/images/projects/backend-assignment/thumbnail.jpg",
-    tags: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
-    link: "/projects/backend-assignment",
-    github: "https://github.com/KsaintJ/assignment3-backend"
   },
 ];
 
