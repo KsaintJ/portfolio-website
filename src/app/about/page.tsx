@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FaDownload, FaBasketballBall, FaCode, FaGlobeAmericas, FaLightbulb, FaUserTie, FaChevronDown } from 'react-icons/fa';
+import { FaDownload, FaBasketballBall, FaCode, FaGlobeAmericas, FaLightbulb, FaUserTie } from 'react-icons/fa';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n';
@@ -11,7 +10,6 @@ import SafeClientOnly from '@/components/SafeClientOnly';
 
 const AboutPage = () => {
   const { t } = useLanguage();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Variants for staggered animations
   const containerVariants = {
@@ -136,10 +134,10 @@ const AboutPage = () => {
                   {t('about.intro.description2')}
                 </p>
                 
-                {/* Resume Downloads */}
+                {/* Resume Download */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    href="/resumes/KSJ_SE_Resume.pdf" 
+                    href="/resumes/Kender_Saint-Juste_Solutions_Engineer.pdf" 
                     target="_blank"
                     rel="noopener noreferrer" 
                     className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md shadow-md transition duration-300 transform hover:scale-105"
@@ -147,40 +145,6 @@ const AboutPage = () => {
                     <FaDownload className="mr-2" />
                     {t('about.resumeButtons.primary')}
                   </Link>
-                  
-                  {/* Dropdown for other resume options */}
-                  <div className="relative">
-                    <button 
-                      onClick={() => setDropdownOpen(!dropdownOpen)}
-                      className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600/10 font-medium rounded-md transition duration-300"
-                    >
-                      {t('about.resumeButtons.dropdown')}
-                      <FaChevronDown className="ml-2 h-4 w-4" />
-                    </button>
-                    
-                    {dropdownOpen && (
-                      <div className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
-                        <Link
-                          href="/resumes/KSJ_SE_Resume.pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-md"
-                          onClick={() => setDropdownOpen(false)}
-                        >
-                          {t('about.resumeButtons.general')}
-                        </Link>
-                        <Link
-                          href="/resumes/KSJ_GRC_Resume.pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-b-md"
-                          onClick={() => setDropdownOpen(false)}
-                        >
-                          {t('about.resumeButtons.frontend')}
-                        </Link>
-                      </div>
-                    )}
-                  </div>
                 </div>
               </motion.div>
             </motion.div>

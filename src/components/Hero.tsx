@@ -66,7 +66,7 @@ const Hero = () => {
         </a>
         
         <a 
-         href="/resumes/KSJ_SE_Resume.pdf" 
+         href="/resumes/Kender_Saint-Juste_Solutions_Engineer.pdf" 
          target="_blank" 
          rel="noopener noreferrer" 
          className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110"
@@ -178,7 +178,7 @@ RULES = ["RULE-001","RULE-002","RULE-003",
               </a>
               
               <a 
-                href="/resumes/KSJ_SE_Resume.pdf" 
+                href="/resumes/Kender_Saint-Juste_Solutions_Engineer.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
