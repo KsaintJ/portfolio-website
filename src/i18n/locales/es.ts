@@ -432,7 +432,7 @@ export default {
       description2: "Cuando no estoy programando, puedes encontrarme jugando baloncesto (soy un gran fan de Kobe Bryant), disfrutando del fútbol, manteniéndome activo o planificando mi próxima aventura de viaje. Equilibro mi ética de trabajo diligente con pensamiento creativo e innovación."
     },
     resumeButtons: {
-      primary: "Descargar CV (Dev)",
+      primary: "Descargar CV",
       dropdown: "Otras Opciones de CV",
       general: "CV General",
       frontend: "CV Frontend"

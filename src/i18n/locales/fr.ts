@@ -378,7 +378,7 @@ portfolio: {
       description2: "Quand je ne code pas, vous pouvez me trouver en train de jouer au basketball (je suis un grand fan de Kobe Bryant), profiter du football, rester actif ou planifier ma prochaine aventure de voyage. J'équilibre mon éthique de travail diligente avec une pensée créative et l'innovation."
     },
     resumeButtons: {
-      primary: "Télécharger CV (Dev)",
+      primary: "Télécharger CV",
       dropdown: "Autres Options de CV",
       general: "CV Général",
       frontend: "CV Frontend"

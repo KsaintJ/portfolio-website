@@ -430,7 +430,7 @@ export default {
       description2: "Lè m pa kodaj, ou ka jwenn mwen ap jwe baskètbòl (mwen se yon gwo fan Kobe Bryant), anvi foutbòl, rete aktif oswa planifye pwochen avanti vwayaj mwen. Mwen ekilibre etik travay diligent mwen ak panse kreyatif ak inovasyon."
     },
     resumeButtons: {
-      primary: "Telechaje CV (Dev)",
+      primary: "Telechaje CV",
       dropdown: "Lòt Opsyon CV",
       general: "CV Jeneral",
       frontend: "CV Frontend"
