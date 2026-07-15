@@ -326,7 +326,7 @@ export default MedicationCard;`,
           className="mb-12"
         >
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Elderly Care Management System
+            Elderly Care Management System — Foundation of OneCare™
           </h1>
           
           <div className="flex flex-wrap gap-2 mb-6">
@@ -399,7 +399,7 @@ export default MedicationCard;`,
                 The Elderly Care Management System is a comprehensive platform designed to improve the quality and efficiency of care provided to elderly individuals. The application connects caregivers, healthcare providers, and family members, enabling better coordination and monitoring of care activities.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6">
-                This project was developed as part of my coursework at Penn State University, where I implemented a full-stack solution addressing real-world challenges in elderly care management.
+                This project began as my SWENG 861 capstone at Penn State, where I implemented a full-stack solution addressing real-world challenges in elderly care management. It&apos;s now the technical foundation for <strong>OneCare by Juste™</strong>, an early-stage AI-powered elderly care platform I&apos;m developing under Juste™ LLC.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">

@@ -26,13 +26,13 @@ const featuredProjects = [
     demo: "https://app.getleast.io"
   },
   {
-    title: "Portfolio Website — portfolio.usejuste.com",
-    description: "This portfolio site — built with Next.js, React, and Tailwind CSS. Features multilingual support (English, French, Haitian Creole, Spanish), dark/light mode, Framer Motion animations, and full i18n architecture.",
-    image: "/images/projects/portfolio-website/thumbnail.png",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "i18n", "Vercel"],
-    link: "/projects/portfolio-website",
-    github: "https://github.com/KsaintJ/portfolio-website",
-    demo: "https://portfolio.usejuste.com"
+    title: "Elderly Care Management System — Foundation of OneCare™",
+    description: "Full-stack platform connecting caregivers, patients, and family members with medication tracking, real-time updates, and role-based access control. Built as my SWENG 861 capstone at Penn State — now being developed into OneCare by Juste™, an AI-powered elderly care platform.",
+    image: "/images/projects/elderly-care-management/thumbnail.jpg",
+    tags: ["React", "Node.js", "Firebase", "MongoDB", "Material UI", "JWT"],
+    link: "/projects/elderly-care-management",
+    github: "https://github.com/psu-edu/pswc-se-2025-spring-sweng861-Kender",
+    demo: null
   },
   {
     title: "Frontend Authentication System",
