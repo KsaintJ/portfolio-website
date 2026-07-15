@@ -258,7 +258,7 @@ export const useTheme = () => useContext(ThemeContext);`,
         >
           <div className="relative w-full h-full">
             <Image
-              src="/images/projects/portfolio-website/thumbnail.svg"
+              src="/images/projects/portfolio-website/thumbnail.jpg"
               alt="Portfolio Website"
               fill
               sizes="(max-width: 768px) 100vw, 1200px"

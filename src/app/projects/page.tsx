@@ -69,11 +69,10 @@ export default function ProjectsPage() {
       id: 'portfolio-website',
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS to showcase my projects and skills.',
-      // Optional: You can use a placeholder or comment this out if no image is available
-      // image: '/images/projects/portfolio-website/thumbnail.jpg',
+      image: '/images/projects/portfolio-website/thumbnail.jpg',
       tags: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
       githubUrl: 'https://github.com/KsaintJ/portfolio-website',
-      liveUrl: 'https://kendersaintjuste.dev',
+      liveUrl: 'https://portfolio.usejuste.com',
       category: 'frontend',
       featured: true,
       detailsUrl: '/projects/portfolio-website'
