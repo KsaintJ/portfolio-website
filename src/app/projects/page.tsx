@@ -8,76 +8,13 @@ import Footer from '@/components/Footer';
 import SafeMotion from '@/components/SafeMotion';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/i18n';
+import { projects } from '@/data/projects';
 
 export default function ProjectsPage() {
   const { t } = useLanguage();
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [displayCount, setDisplayCount] = useState(6);
-  
-  // Project data with image paths
-  const projects = [
-    {
-      id: 'least-by-juste',
-      title: 'Least by Juste™',
-      description: 'IAM SaaS — access review autopilot for Google Workspace. 9-rule deterministic risk engine, AI-generated explanations via Claude, automated daily scans, and PDF audit reports. Live product.',
-      image: '/images/projects/least-by-juste/thumbnail.png',
-      tags: ['Python', 'FastAPI', 'Next.js', 'Supabase', 'Google OAuth', 'Claude AI'],
-      githubUrl: 'https://github.com/KsaintJ',
-      liveUrl: 'https://app.getleast.io',
-      category: 'full-stack',
-      featured: true,
-      detailsUrl: '/projects/least-by-juste'
-    },
-    {
-      id: 'elderly-care-management',
-      title: 'Elderly Care Management System',
-      description: 'A comprehensive web application for managing elderly care facilities, tracking patient information, and coordinating staff schedules.',
-      image: '/images/projects/elderly-care-management/thumbnail.jpg',
-      tags: ['React', 'Material UI', 'Node.js', 'Express'],
-      githubUrl: 'https://github.com/psu-edu/pswc-se-2025-spring-sweng861-Kender',
-      videoUrl: 'https://www.youtube.com/watch?v=1-amkgJm36M',
-      category: 'full-stack',
-      featured: true,
-      detailsUrl: '/projects/elderly-care-management'
-    },
-    {
-      id: 'frontend-assignment',
-      title: 'Frontend Authentication System',
-      description: 'A modern web application implementing secure authentication and API integration, featuring comprehensive error handling and thorough testing coverage.',
-      image: '/images/projects/frontend-assignment/thumbnail.jpg',
-      tags: ['React', 'Redux Toolkit', 'Tailwind CSS', 'Vitest', 'Google OAuth'],
-      githubUrl: 'https://github.com/KsaintJ/assignment4-frontend',
-      liveUrl: null,
-      category: 'frontend',
-      featured: true,
-      detailsUrl: '/projects/frontend-assignment'
-    },
-    {
-      id: 'backend-assignment',
-      title: 'News API Backend Service',
-      description: 'A backend service implementing REST APIs for news articles, with CRUD operations, third-party API integration, and comprehensive error handling.',
-      image: '/images/projects/backend-assignment/thumbnail.jpg',
-      tags: ['Node.js', 'Express', 'MongoDB', 'News API', 'CRUD'],
-      githubUrl: 'https://github.com/KsaintJ/assignment3-backend',
-      liveUrl: null,
-      category: 'backend',
-      featured: true,
-      detailsUrl: '/projects/backend-assignment'
-    },
-    {
-      id: 'portfolio-website',
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS to showcase my projects and skills.',
-      image: '/images/projects/portfolio-website/thumbnail.jpg',
-      tags: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
-      githubUrl: 'https://github.com/KsaintJ/portfolio-website',
-      liveUrl: 'https://portfolio.usejuste.com',
-      category: 'frontend',
-      featured: true,
-      detailsUrl: '/projects/portfolio-website'
-    }
-  ];
   
   // Filter categories
   const filterOptions = [

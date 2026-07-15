@@ -13,37 +13,9 @@ import StackVisualization from '@/components/StackVisualization';
 import SkillsRadar from '@/components/SkillsRadar';
 import ScrollReveal from '@/components/ScrollReveal';
 import { useLanguage } from '@/i18n';
+import { projects } from '@/data/projects';
 
-// Sample projects data - replace with your actual projects
-const featuredProjects = [
-  {
-    title: "Least by Juste™ — Access Review Automation",
-    description: "Live SaaS product I founded and built. Automates Google Workspace access reviews and generates SOC 2 CC6.x-aligned audit evidence for SMBs. Built with Next.js, Python, FastAPI, Supabase, and Google Admin SDK.",
-    image: "/images/projects/least-by-juste/thumbnail.png",
-    tags: ["Next.js", "Python", "FastAPI", "Supabase", "Google Admin SDK", "SOC 2"],
-    link: "/projects/least-by-juste",
-    github: "https://github.com/KsaintJ/iam-grc-portfolio",
-    demo: "https://app.getleast.io"
-  },
-  {
-    title: "Elderly Care Management System — Foundation of OneCare™",
-    description: "Full-stack platform connecting caregivers, patients, and family members with medication tracking, real-time updates, and role-based access control. Built as my SWENG 861 capstone at Penn State — now being developed into OneCare by Juste™, an AI-powered elderly care platform.",
-    image: "/images/projects/elderly-care-management/thumbnail.jpg",
-    tags: ["React", "Node.js", "Firebase", "MongoDB", "Material UI", "JWT"],
-    link: "/projects/elderly-care-management",
-    github: "https://github.com/psu-edu/pswc-se-2025-spring-sweng861-Kender",
-    demo: null
-  },
-  {
-    title: "Frontend Authentication System",
-    description: "Secure authentication system with OAuth integration, JWT token management, role-based access control, and comprehensive error handling. Built with React and Redux Toolkit.",
-    image: "/images/projects/frontend-assignment/thumbnail.jpg",
-    tags: ["React", "Redux", "Tailwind CSS", "JWT", "OAuth"],
-    link: "/projects/frontend-assignment",
-    github: "https://github.com/KsaintJ/assignment4-frontend",
-    demo: "https://frontend-auth-demo.vercel.app"
-  },
-];
+const featuredProjects = projects.filter(p => p.homepageFeatured);
 
 export default function Home() {
   const controls = useAnimation();
@@ -124,15 +96,15 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
-              <ScrollReveal key={project.title} delay={index * 0.1}>
+              <ScrollReveal key={project.id} delay={index * 0.1}>
                 <ProjectCard
                   title={project.title}
                   description={project.description}
                   image={project.image}
                   tags={project.tags}
-                  github={project.github}
-                  demo={project.demo}
-                  link={project.link}
+                  github={project.githubUrl}
+                  demo={project.liveUrl}
+                  link={project.detailsUrl}
                 />
               </ScrollReveal>
             ))}
