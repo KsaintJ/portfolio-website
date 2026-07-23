@@ -12,8 +12,8 @@ export default {
   },
   hero: {
     title: "Alo, mwen se Kender Saint-Juste",
-    subtitle: "Devlopè Full Stack MERN/MEAN",
-    description: "Mwen kreye aplikasyon web ki reyaktif epi ki santre sou itilizatè yo avèk React, Next.js ak JavaScript modèn. Aktyèlman mwen ap fè metriz mwen nan jeni lojisyèl nan Penn State.",
+    subtitle: "Fondatè · Enjenyè Solisyon · Bilding",
+    description: "Mwen bati pwodwi nan entèseksyon gouvènans aksè, AI, ak jeni lojisyèl. Fondatè ak CEO Juste™ LLC — kreyatè Least by Juste™, yon pwodwi SaaS ki an sèvis pou otomatize revizyon aksè Google Workspace.",
     cta: {
       work: "Gade Travay Mwen",
       contact: "Kontakte Mwen"
@@ -21,7 +21,7 @@ export default {
   },
   skills: {
     title: "Konpetans Mwen yo",
-    description: "Mwen devlope ekspètiz nan divès teknoloji nan tout stack la, ak yon aksan sou frameworks ak bibliyotèk JavaScript.",
+    description: "Background teknik full-stack ki kouvri gouvènans aksè, devlopman pwodwi SaaS, ak sekirite antrepriz — bati atravè plis pase 12 an eksperyans pwofesyonèl ak travay sou pwodwi ki an sèvis.",
     categories: {
       all: "Tout Konpetans",
       frontend: "Frontend",
@@ -425,8 +425,8 @@ export default {
   about: {
     title: "Sou Mwen",
     intro: {
-      subtitle: "Alo, mwen se Kender Saint-Juste, yon Devlopè Junior ki soti Tampa, Florid. Mwen aktyèlman ap fè metriz mwen nan jeni lojisyèl nan Penn State University (prevwa pou 2027).",
-      description1: "Avèk yon fòmasyon solid nan devlopman frontend ak backend, mwen pasyone pou kreye aplikasyon web ki ka grandi ki itilize JavaScript, React, Node.js ak MongoDB. Eksperyans mwen nan sekirite enfòmatik ak eksperyans resan mwen nan TeamViewer te ban mwen konpetans presye nan rezoud pwoblèm, siksè kliyan, ak solisyon lojisyèl antrepriz.",
+      subtitle: "Alo, mwen se Kender Saint-Juste — Fondatè ak CEO Juste™ LLC, ak plis pase 12 an eksperyans pwofesyonèl ak yon pwodwi SaaS ki an sèvis.",
+      description1: "Mwen bati nan entèseksyon gouvènans aksè, AI, ak jeni lojisyèl. Kòm fondatè Juste™ LLC, mwen kreye Least by Juste™, yon pwodwi ki an sèvis ki otomatize revizyon aksè Google Workspace. Plis pase 12 an eksperyans mwen — ki gen ladan senk an nan operasyon IAM ak GRC antrepriz — ban mwen yon baz solid nan gouvènans idantite, konfòmite regilasyon, ak achitekti sistèm.",
       description2: "Lè m pa kodaj, ou ka jwenn mwen ap jwe baskètbòl (mwen se yon gwo fan Kobe Bryant), anvi foutbòl, rete aktif oswa planifye pwochen avanti vwayaj mwen. Mwen ekilibre etik travay diligent mwen ak panse kreyatif ak inovasyon."
     },
     resumeButtons: {
@@ -436,21 +436,21 @@ export default {
       frontend: "CV Frontend"
     },
     internship: {
-      title: "Chèche Opòtinite Estaj",
-      description: "Mwen aktivman ap chèche opòtinite estaj nan jeni lojisyèl kote mwen ka aplike konesans akademik mwen epi kontribye nan pwojè ki gen enpak. Kòm yon etidyan metriz nan jeni lojisyèl nan Penn State, mwen vle pou jwenn eksperyans pwofesyonèl nan yon anviwònman ekip kolaboratif.",
+      title: "Aktyèlman ap Chèche",
+      description: "Mwen se fondatè yon pwodwi ki an sèvis ak plis pase 12 an eksperyans pwofesyonèl — aktivman ap chèche pwochen wòl mwen pandan m ap kontinye devlope Juste™ LLC. Mwen pote vrè pwofondè teknik, pa sèlman kalifikasyon.",
       availability: {
-        title: "Disponibilite",
-        fullTime: "Ete 2025 (Tan Konplè)",
-        partTime: "Otòn/Prentan 2024-2025 (Tan Pasyèl)",
-        location: "Adistans oswa zòn Tampa, FL"
+        title: "Disponib Kounye a",
+        fullTime: "Enjenyè Solisyon / Enjenyè Pre-Vant",
+        partTime: "Analis GRC / Analis Sekirite Enfòmasyon",
+        location: "Lidè Implemantasyon / Manadjè Kont Teknik"
       },
       interests: {
-        title: "Domèn Enterè",
-        frontend: "Devlopman Frontend (React, Next.js)",
-        fullstack: "Devlopman Full-Stack",
-        webApp: "Devlopman Aplikasyon Web"
+        title: "K ap Devlope Vè",
+        frontend: "Devlopè Full-Stack / Enjenyè Fondatè",
+        fullstack: "Manadjè Pwodwi / Pwopriyetè Teknik Pwodwi",
+        webApp: "Fondatè / CEO — Juste™ LLC a tan plen"
       },
-      cta: "Kontakte Mwen pou Opòtinite"
+      cta: "Ann Pale"
     },
     traits: {
       title: "Karakteristik Pèsonèl Mwen",

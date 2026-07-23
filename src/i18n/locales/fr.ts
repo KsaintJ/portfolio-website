@@ -12,8 +12,8 @@ export default {
   },
   hero: {
     title: "Bonjour, je suis Kender Saint-Juste",
-    subtitle: "Développeur Full Stack MERN/MEAN",
-    description: "Je crée des applications web réactives et centrées sur l'utilisateur avec React, Next.js et JavaScript moderne. Je poursuis actuellement ma maîtrise en génie logiciel à Penn State.",
+    subtitle: "Fondateur · Ingénieur Solutions · Bâtisseur",
+    description: "Je conçois des produits à l'intersection de la gouvernance des accès, de l'IA et du génie logiciel. Fondateur et PDG de Juste™ LLC — créateur de Least by Juste™, un produit SaaS en production pour l'automatisation des revues d'accès Google Workspace.",
     cta: {
       work: "Voir Mon Travail",
       contact: "Me Contacter"
@@ -21,7 +21,7 @@ export default {
   },
   skills: {
     title: "Mes Compétences",
-    description: "J'ai développé une expertise dans diverses technologies à travers le full stack, avec un accent sur les frameworks et bibliothèques JavaScript.",
+    description: "Formation technique full-stack couvrant la gouvernance des accès, le développement de produits SaaS et la sécurité d'entreprise — acquise à travers plus de 12 ans d'expérience professionnelle et de travail sur des produits en production.",
     categories: {
       all: "Toutes les Compétences",
       frontend: "Frontend",
@@ -373,8 +373,8 @@ portfolio: {
   about: {
     title: "À Propos de Moi",
     intro: {
-      subtitle: "Bonjour, je suis Kender Saint-Juste, un Développeur Junior de Tampa, en Floride. Je poursuis actuellement ma maîtrise en génie logiciel à l'Université Penn State (prévu pour 2027).",
-      description1: "Avec une solide formation en développement frontend et backend, je suis passionné par la création d'applications web évolutives utilisant JavaScript, React, Node.js et MongoDB. Mon expérience en sécurité informatique et mon expérience récente chez TeamViewer m'ont doté de compétences précieuses en dépannage, en réussite client et en solutions logicielles d'entreprise.",
+      subtitle: "Bonjour, je suis Kender Saint-Juste — Fondateur et PDG de Juste™ LLC, avec plus de 12 ans d'expérience professionnelle et un produit SaaS en production.",
+      description1: "Je conçois à l'intersection de la gouvernance des accès, de l'IA et du génie logiciel. En tant que fondateur de Juste™ LLC, j'ai créé Least by Juste™, un produit en production qui automatise les revues d'accès Google Workspace. Mes plus de 12 ans d'expérience — dont cinq ans en opérations IAM et GRC d'entreprise — m'ont donné une base solide en gouvernance des identités, conformité réglementaire et architecture de systèmes.",
       description2: "Quand je ne code pas, vous pouvez me trouver en train de jouer au basketball (je suis un grand fan de Kobe Bryant), profiter du football, rester actif ou planifier ma prochaine aventure de voyage. J'équilibre mon éthique de travail diligente avec une pensée créative et l'innovation."
     },
     resumeButtons: {
@@ -384,21 +384,21 @@ portfolio: {
       frontend: "CV Frontend"
     },
     internship: {
-      title: "À la Recherche d'Opportunités de Stage",
-      description: "Je recherche activement des opportunités de stage en génie logiciel où je peux appliquer mes connaissances académiques et contribuer à des projets d'impact. En tant qu'étudiant en maîtrise en génie logiciel à Penn State, je suis désireux d'acquérir une expérience professionnelle dans un environnement d'équipe collaboratif.",
+      title: "Actuellement à la Recherche",
+      description: "Je suis fondateur d'un produit en production avec plus de 12 ans d'expérience professionnelle — activement à la recherche de mon prochain poste tout en continuant à développer Juste™ LLC. J'apporte une véritable profondeur technique, pas seulement des diplômes.",
       availability: {
-        title: "Disponibilité",
-        fullTime: "Été 2025 (Temps plein)",
-        partTime: "Automne/Printemps 2024-2025 (Temps partiel)",
-        location: "À distance ou région de Tampa, FL"
+        title: "Activement Recherché",
+        fullTime: "Ingénieur Solutions / Ingénieur Avant-Vente",
+        partTime: "Analyste GRC / Analyste en Sécurité de l'Information",
+        location: "Responsable de la Mise en Œuvre / Chargé de Compte Technique"
       },
       interests: {
-        title: "Domaines d'Intérêt",
-        frontend: "Développement Frontend (React, Next.js)",
-        fullstack: "Développement Full-Stack",
-        webApp: "Développement d'Applications Web"
+        title: "Objectifs à Venir",
+        frontend: "Développeur Full-Stack / Ingénieur Fondateur",
+        fullstack: "Chef de Produit / Responsable Produit Technique",
+        webApp: "Fondateur / PDG — Juste™ LLC à temps plein"
       },
-      cta: "Me Contacter pour des Opportunités"
+      cta: "Discutons"
     },
     traits: {
       title: "Mes Traits Personnels",

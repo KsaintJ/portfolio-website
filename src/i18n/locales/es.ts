@@ -12,8 +12,8 @@ export default {
   },
   hero: {
     title: "Hola, soy Kender Saint-Juste",
-    subtitle: "Desarrollador Full Stack MERN/MEAN",
-    description: "Creo aplicaciones web responsivas y centradas en el usuario con React, Next.js y JavaScript moderno. Actualmente estoy cursando mi maestría en ingeniería de software en Penn State.",
+    subtitle: "Fundador · Ingeniero de Soluciones · Constructor",
+    description: "Construyo productos en la intersección de la gobernanza de accesos, la IA y la ingeniería de software. Fundador y CEO de Juste™ LLC — creador de Least by Juste™, un producto SaaS en producción para la automatización de revisiones de acceso de Google Workspace.",
     cta: {
       work: "Ver Mi Trabajo",
       contact: "Contactarme"
@@ -21,7 +21,7 @@ export default {
   },
   skills: {
     title: "Mis Habilidades",
-    description: "He desarrollado experiencia en diversas tecnologías en todo el stack, con énfasis en marcos y bibliotecas de JavaScript.",
+    description: "Formación técnica full-stack que abarca gobernanza de accesos, desarrollo de productos SaaS y seguridad empresarial — adquirida a través de más de 12 años de experiencia profesional y trabajo en productos en producción.",
     categories: {
       all: "Todas las Habilidades",
       frontend: "Frontend",
@@ -427,8 +427,8 @@ export default {
   about: {
     title: "Sobre Mí",
     intro: {
-      subtitle: "Hola, soy Kender Saint-Juste, un Desarrollador Junior de Tampa, Florida. Actualmente estoy cursando mi maestría en ingeniería de software en la Universidad Penn State (prevista para 2027).",
-      description1: "Con una sólida formación en desarrollo frontend y backend, me apasiona crear aplicaciones web escalables utilizando JavaScript, React, Node.js y MongoDB. Mi experiencia en seguridad informática y mi reciente experiencia en TeamViewer me han proporcionado valiosas habilidades en resolución de problemas, éxito del cliente y soluciones de software empresarial.",
+      subtitle: "Hola, soy Kender Saint-Juste — Fundador y CEO de Juste™ LLC, con 12+ años de experiencia profesional y un producto SaaS en producción.",
+      description1: "Construyo en la intersección de la gobernanza de accesos, la IA y la ingeniería de software. Como fundador de Juste™ LLC, creé Least by Juste™, un producto en producción que automatiza las revisiones de acceso de Google Workspace. Mi experiencia de más de 12 años — incluyendo cinco años en operaciones de IAM y GRC empresarial — me dio una base real en gobernanza de identidad, cumplimiento normativo y arquitectura de sistemas.",
       description2: "Cuando no estoy programando, puedes encontrarme jugando baloncesto (soy un gran fan de Kobe Bryant), disfrutando del fútbol, manteniéndome activo o planificando mi próxima aventura de viaje. Equilibro mi ética de trabajo diligente con pensamiento creativo e innovación."
     },
     resumeButtons: {
@@ -438,21 +438,21 @@ export default {
       frontend: "CV Frontend"
     },
     internship: {
-      title: "Buscando Oportunidades de Pasantía",
-      description: "Estoy buscando activamente oportunidades de pasantía en ingeniería de software donde pueda aplicar mi conocimiento académico y contribuir a proyectos impactantes. Como estudiante de maestría en ingeniería de software en Penn State, estoy ansioso por obtener experiencia profesional en un entorno de equipo colaborativo.",
+      title: "Actualmente Buscando",
+      description: "Soy fundador de un producto en producción con más de 12 años de experiencia profesional — buscando activamente mi próximo rol mientras continúo desarrollando Juste™ LLC. Aporto profundidad técnica real, no solo credenciales.",
       availability: {
-        title: "Disponibilidad",
-        fullTime: "Verano 2025 (Tiempo completo)",
-        partTime: "Otoño/Primavera 2024-2025 (Tiempo parcial)",
-        location: "Remoto o área de Tampa, FL"
+        title: "Disponible Ahora",
+        fullTime: "Ingeniero de Soluciones / Ingeniero de Preventa",
+        partTime: "Analista GRC / Analista de Seguridad de la Información",
+        location: "Líder de Implementación / Gerente Técnico de Cuentas"
       },
       interests: {
-        title: "Áreas de Interés",
-        frontend: "Desarrollo Frontend (React, Next.js)",
-        fullstack: "Desarrollo Full-Stack",
-        webApp: "Desarrollo de Aplicaciones Web"
+        title: "Construyendo Hacia",
+        frontend: "Desarrollador Full-Stack / Ingeniero Fundador",
+        fullstack: "Gerente de Producto / Propietario Técnico de Producto",
+        webApp: "Fundador / CEO — Juste™ LLC a tiempo completo"
       },
-      cta: "Contáctame para Oportunidades"
+      cta: "Hablemos"
     },
     traits: {
       title: "Mis Rasgos Personales",
